@@ -1,0 +1,383 @@
+ @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+            html {
+                font-family: 'Press Start 2P', cursive;
+                font-size: 15px;
+                font-weight: bold;
+                background-color: #343F3E
+};
+            body{
+            margin: 0;
+            }
+            header{
+                height: 200px;
+                background-color: blue;
+                background-image: url(https://static.themoscowtimes.com/image/article_1360/ad/TASS31128345.jpg);
+                background-size: cover;
+                background-position: 50% 25%;
+                margin: 0;
+            }
+            .coom{
+                background-color: pink;
+                margin: 0;
+                background-image: url(https://sher.media/wp-content/uploads/2020/10/2795340439_bacf3599c7_o.jpg);
+            }
+            #inhead{
+                display: flex;
+                justify-content: space-between;
+                align-content: center;
+            }
+            .inheader{
+                height:150px;
+                width: 150px;
+                margin: 2%;
+            }
+            #funny{
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            #nofunny{
+                background-image: url(https://i.imgur.com/O2jIiHu_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-size: contain;
+            }
+            #iheader{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-content: center;
+            }
+            .contact{
+                height:30px;
+                width: 60px;
+                background-color: #343F3E;
+                margin: 4%;
+                border-radius: 9px;
+                text-align: center;
+                line-height: 30px;
+                color: white;
+            }
+            .contact2{
+                height:60px;
+                width: 60px;
+                background-color: #343F3E;
+                margin: 4%;
+            }
+            #kasha{
+                
+                background-image: url(https://i.imgur.com/qtpAHS1_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-size: cover;
+                border-radius: 15px;
+            }
+            #pura{
+                background-image: url(https://i.imgur.com/aa5gPNs_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-size: cover;
+                border-radius: 15px;
+            }
+            #bruh{
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                justify-content: center;
+                background-color: rgba(10,10,10,.4);
+                width: 85%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .shit{
+                height: 500px;
+                margin: 1% 2%;
+                background-color: red;
+                background-image: url(https://i.imgur.com/JJNqDml_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-size: cover;
+                border-radius: 7px;
+            }
+            .textpain{
+                height: 20px;
+                width: 494px;
+                margin-left: 50%;
+                margin-top: 4%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(6, 20, 9,.6);
+                color: white;
+                line-height: 22px;
+                text-align: center;
+            }
+            .pain{
+                width: 580px;
+                height: 69px;
+                margin-left: 50%;
+                margin-top: 3.5%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(6, 20, 9,.6);
+                color: white;
+                text-align: center;
+                line-height: 79px;
+                font-size: 50px;
+            }
+            .painPS{
+                width: 160px;
+                height: 20px;
+                margin-left: 50%;
+                margin-top: 0;
+                transform: translate(-50%,-150%);
+                background-color: rgba(6,20,9,.6);
+                color: white;
+                text-align: center;
+                line-height: 22px;
+                text-align: center;
+            }
+            .tabletka{
+                height: 169px;
+                width: 169px;
+                position: relative;
+                top: 20%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-image: url(https://i.imgur.com/8ariOk6_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                touch-action: manipulation;
+            }
+            .piss{ 
+                height: 100px;
+                margin: 1% 2%;
+                background-color: #94B0DA;
+                border-radius: 7px;
+            }
+            #sussy-baka{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .bakacover{
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0,0,0,0.1);
+                border-radius: 15px;
+                display: none;
+                box-shadow:inset 5px 5px 10px rgba(0,0,0,.5);
+                transform: translate(0, -112%);
+            }
+            .baka1{
+                /*background-image: url(https://i.imgur.com/bchbfa3_d.webp?maxwidth=640&shape=thumb&fidelity=medium);*/
+                height: 85px;
+                width: 20%;
+                border-radius: 15px;
+                background-color: #343F3E;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                color: white;
+                text-align:center;
+                line-height: 95px;
+                font-size: 50px;
+            }
+            .baka2{
+                /*background-image: url(https://i.imgur.com/J6Sq3Jc_d.webp?maxwidth=640&shape=thumb&fidelity=medium);*/
+                height: 85%;
+                width: 20%;
+                border-radius: 15px;
+                background-color: #343F3E;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                color: white;
+                text-align:center;
+                line-height: 95px;
+                font-size: 50px;
+            }
+            .baka3{
+                /*background-image: url(https://i.imgur.com/rzmFpkJ_d.webp?maxwidth=640&shape=thumb&fidelity=medium);*/
+                height: 85%;
+                width: 20%;
+                border-radius: 15px;
+                background-color: #343F3E;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                color: white;
+                text-align:center;
+                line-height: 95px;
+                font-size: 50px;
+            }
+            .baka4{
+                /*background-image: url(https://i.imgur.com/5FE8v7Q_d.webp?maxwidth=640&shape=thumb&fidelity=medium);*/
+                height: 85%;
+                width: 20%;
+                border-radius: 15px;
+                background-color: #343F3E;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                color: white;
+                text-align:center;
+                line-height: 95px;
+                font-size: 50px;
+            }
+            .cum{
+                margin: 1% 2%;
+                background-color: #8F91A2;
+                border-radius: 7px;
+            }
+            #yhoho{
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+            .gnome{
+                height: 150px;
+                margin: 1% 2%;
+            }
+            #gnomo{
+                display: flex;
+                align-items: center;
+            }
+            .up-pick{
+                height: 128px;
+                width: 128px;
+                background-color: #343F3E;
+                background-size: contain;
+                border-radius: 20px;
+                box-shadow: 5px 5px 10px rgba(0,0,0,.7);
+            }
+            #clickWeighter{
+                background-image: url(https://i.imgur.com/56Qov9g_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            #worker{
+                background-image: url(https://i.imgur.com/Tv1ZKYB_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-repeat: no-repeat;
+            }
+            #migrant{
+                background-image: url(https://i.imgur.com/4N9wT1L_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-repeat: no-repeat;
+            }
+            #childs{
+                background-image: url(
+                    https://i.imgur.com/RGRBIeB_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-repeat: no-repeat;
+            }
+            #robo{
+                background-image: url(https://i.imgur.com/y4dAkTX_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-size: 80%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            #newsAds{
+                background-image: url(https://i.imgur.com/oXIUnDp_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            #television{
+                background-image: url(https://i.imgur.com/1wOy6hz_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 90%;
+            }
+            #spam{
+                background-image: url(https://i.imgur.com/HhSHI3Q_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 90%;
+            }
+            #zeppelin{
+                background-image: url(https://i.imgur.com/eTLXuM2_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            #student{
+                background-image: url(https://i.imgur.com/4gNJ39w_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 160%;
+            }
+            #sciense{
+                background-image: url(https://i.imgur.com/KxlUo6i_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            #researcher{
+                background-image: url(https://i.imgur.com/xIIhfPE_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            #neuro{
+                background-image: url(https://i.imgur.com/B9hWrlI_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            #overseer{
+                background-image: url(https://www.iconsdb.com/icons/preview/white/invisible-xxl.png);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            #test{
+                background-image: url(https://i.imgur.com/cPudIh0_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            #SPACEHYPNOLASER{
+                background-image: url(https://i.imgur.com/M5Unz4D_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            #name-cost{
+                height: 128px;
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                justify-content: center;
+            }
+            #name-bought{
+                display: flex;
+                justify-content: space-between;
+                height: 20%;
+            }
+            .name{
+                background-color: #505A5B;
+                color: white;
+                line-height: 25px;
+                box-shadow: 5px 5px 10px rgba(0,0,0,.7);
+            }
+            .bought{
+                width: auto;
+                background-color: #505A5B;
+                color: white;
+                text-align: right;
+                line-height: 25px;
+                box-shadow: 5px 5px 10px rgba(0,0,0,.7);
+            }
+            .cost{
+                height: 90px;
+                background-color: #505A5B;
+                opacity: 0.8;
+                color: white;
+                text-align: center;
+                line-height: 100px;
+                font-size: 35px;
+                box-shadow: 5px 5px 10px rgba(0,0,0,.7);
+            }
+            
+            .gameVersion{
+                height: 30px;
+                width: 269px;
+                color: white;
+                background-color: grey;
+                line-height: 30px;
+                text-align: center;
+            }
+            
+            .cumm2{
+                display: none;
+            }
+            .cumm1{
+                display: block;
+            }
+            
+            .yeshow {display:block;}
+            .noshow {display:none;}
+            
