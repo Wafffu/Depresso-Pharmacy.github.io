@@ -1,3 +1,4 @@
+
         function baka1toggle(){
             hideAll();
             document.getElementById("cum1").classList.remove("noshow");
@@ -47,6 +48,7 @@
         
         //ОБЪЯВЛЯТЬ ЗДЕСЬ УЛУЧШЕНИЯ
             let moni = 0;
+            let moniPS = 0;
             let clickWeight = 1;
             let clickWeightCost = 10;
             clickWeights = 0;
@@ -75,11 +77,11 @@
             let tests = 0;
             let roboCost = 103920000000;
             let robos = 0;
-            let zeppelinCost = 727400000000;
+            let zeppelinCost = 999999999999;
             let zeppelins = 0;
             let neuroCost = 6546000000000;
             let neuros = 0;
-            let SPACEHYPNOLASERCost = 72016000000000;
+            let SPACEHYPNOLASERCost = 99999999999999;
             let SPACEHYPNOLASERs = 0;
             let newValue = 69;
             
@@ -93,7 +95,7 @@
                     moni -= clickWeightCost;
                     clickWeights++;
                     clickWeight += 1;
-                    clickWeightCost = Math.ceil(10 * 1.15 ** clickWeights);
+                    clickWeightCost = (10 * 1.15 ** clickWeights);
                     document.getElementById('clickWeightCost').innerHTML = abbreviateNumber(clickWeightCost);
                 document.getElementById('clickWeights').innerHTML = clickWeights;
                 document.getElementById('monni').innerHTML = abbreviateNumber(moni);
@@ -104,7 +106,7 @@
                 if(moni >= workerCost){
                 moni -= workerCost;
                 workers++;
-                workerCost = Math.ceil(35 * 1.15 ** workers);
+                workerCost = (35 * 1.15 ** workers);
                 document.getElementById('workerCost').innerHTML = abbreviateNumber(workerCost);
                 document.getElementById('workers').innerHTML = workers;
                 document.getElementById('monni').innerHTML = abbreviateNumber(moni);
@@ -115,7 +117,7 @@
                 if(moni >= newsCost){
                 moni -= newsCost;
                 newss++;
-                newsCost = Math.ceil(222 * 1.15 ** newss);
+                newsCost = (222 * 1.15 ** newss);
                 document.getElementById('newsCost').innerHTML = abbreviateNumber(newsCost);
                 document.getElementById('newss').innerHTML = newss;
                 document.getElementById('monni').innerHTML = abbreviateNumber(moni);
@@ -126,7 +128,7 @@
                 if(moni >= studentCost){
                 moni -= studentCost;
                 students++;
-                studentCost = Math.ceil(1250 * 1.15 ** students);
+                studentCost = (1250 * 1.15 ** students);
                 document.getElementById('studentCost').innerHTML = abbreviateNumber(studentCost);
                 document.getElementById('students').innerHTML = students;
                 document.getElementById('monni').innerHTML = abbreviateNumber(moni);
@@ -137,18 +139,18 @@
                 if(moni >= migrantCost){
                 moni -= migrantCost;
                 migrants++;
-                migrantCost = Math.ceil(12500 * 1.14 ** migrants);
-                document.getElementById('workerCost').innerHTML = abbreviateNumber(migrantCost);
+                migrantCost = (12500 * 1.14 ** migrants);
+                document.getElementById('migrantCost').innerHTML = abbreviateNumber(migrantCost);
                 document.getElementById('migrants').innerHTML = migrants;
                 document.getElementById('monni').innerHTML = abbreviateNumber(moni);
                 }
             }
             
-            function buyTvv(){
+            function buyTv(){
                 if(moni >= tvCost){
                 moni -= tvCost;
                 tvs++;
-                tvCost = Math.ceil(75000 * 1.15 ** tvs);
+                tvCost = (75000 * 1.15 ** tvs);
                 document.getElementById('tvCost').innerHTML = abbreviateNumber(tvCost);
                 document.getElementById('tvs').innerHTML = tvs;
                 document.getElementById('monni').innerHTML = abbreviateNumber(moni);
@@ -159,7 +161,7 @@
                 if(moni >= scienseCost){
                 moni -= scienseCost;
                 scienses++;
-                scienseCost = Math.ceil(104000 * 1.16 ** scienses);
+                scienseCost = (104000 * 1.16 ** scienses);
                 document.getElementById('scienseCost').innerHTML = abbreviateNumber(scienseCost);
                 document.getElementById('scienses').innerHTML = scienses;
                 document.getElementById('monni').innerHTML = abbreviateNumber(moni);
@@ -170,7 +172,7 @@
                 if(moni >= overseerCost){
                 moni -= overseerCost;
                 overseers++;
-                overseerCost = Math.ceil(2600000 * 1.14 ** overseers);
+                overseerCost = (2600000 * 1.14 ** overseers);
                 document.getElementById('overseerCost').innerHTML = abbreviateNumber(overseerCost);
                 document.getElementById('overseers').innerHTML = overseers;
                 document.getElementById('monni').innerHTML = abbreviateNumber(moni);
@@ -181,7 +183,7 @@
                 if(moni >= childCost){
                 moni -= childCost;
                 childs++;
-                childCost = Math.ceil(26000000 * 1.14 ** childs);
+                childCost = (26000000 * 1.14 ** childs);
                 document.getElementById('childCost').innerHTML = abbreviateNumber(childCost);
                 document.getElementById('childs').innerHTML = childs;
                 document.getElementById('monni').innerHTML = abbreviateNumber(moni);
@@ -192,7 +194,7 @@
                 if(moni >= spamCost){
                 moni -= spamCost;
                 spams++;
-                spamCost = Math.ceil(183000000 * 1.15 ** spams);
+                spamCost = (183000000 * 1.15 ** spams);
                 document.getElementById('spamCost').innerHTML = abbreviateNumber(spamCost);
                 document.getElementById('spams').innerHTML = spams;
                 document.getElementById('monni').innerHTML = abbreviateNumber(moni);
@@ -236,7 +238,7 @@
                 if(moni >= zeppelinCost){
                 moni -= zeppelinCost;
                 zeppelins++;
-                zeppelinCost = Math.ceil(727400000000 * 1.18 ** zeppelins);
+                zeppelinCost = 727400000000 * 1.18 ** zeppelins;
                 document.getElementById('zeppelinCost').innerHTML = abbreviateNumber(zeppelinCost);
                 document.getElementById('zeppelins').innerHTML = zeppelins;
                 document.getElementById('monni').innerHTML = abbreviateNumber(moni);
@@ -258,7 +260,7 @@
                 if(moni >= SPACEHYPNOLASERCost){
                 moni -= SPACEHYPNOLASERCost;
                 SPACEHYPNOLASERs++;
-                SPACEHYPNOLASERCost = Math.ceil(72016000000000 * 1.15 ** SPACEHYPNOLASERs);
+                SPACEHYPNOLASERCost = (99999999999999 * 1.15 ** SPACEHYPNOLASERs);
                 document.getElementById('SPACEHYPNOLASERCost').innerHTML = abbreviateNumber(SPACEHYPNOLASERCost);;
                 document.getElementById('SPACEHYPNOLASERs').innerHTML = SPACEHYPNOLASERs;
                 document.getElementById('monni').innerHTML = abbreviateNumber(moni);
@@ -437,13 +439,13 @@
             
             
             
-            function abbreviateNumber(value) {
+            /*function abbreviateNumber(value) {
     let newValue = value;
     if (value >= 1000) {
         let suffixes = ["", "k", "m", "b","t"];
-        let suffixNum = Math.floor( (""+value).length/3 );
+        let suffixNum = Math.floor( (""+value).length/5 );
         let shortValue = '';
-        for (let precision = 2; precision >= 1; precision--) {
+        for (let precision = 3; precision >= 1; precision--) {
             shortValue = parseFloat( (suffixNum != 0 ? (value / Math.pow(1000,suffixNum) ) : value).toPrecision(precision));
             let dotLessShortValue = (shortValue + '').replace(/[^a-zA-Z 0-9]+/g,'');
             if (dotLessShortValue.length <= 2) { break; }
@@ -452,8 +454,23 @@
         newValue = shortValue+suffixes[suffixNum];
     }
     return newValue;
-}
+}*/
             
+            
+            let i = 0;
+            let suffixes = ["р","т.р","м.р","б.р","тр.р","кв.р","но.р","брух"];
+            function abbreviateNumber(value){
+                let newValue = value;
+                if (newValue < 1000){
+                    newValue = Math.floor(newValue*100)/100;
+                    dick = newValue + suffixes[i];
+                    i=0;
+                } else{
+                newValue /= 1000;
+                    i++;
+                    abbreviateNumber(newValue);
+            }return dick;
+            }
             
             
             setInterval(function(){
@@ -464,9 +481,9 @@
             
             //ДОБАВЛЯТЬ УЛУЧШЕНТЯ СЮДА
             setInterval(function(){
-                moni += workers + newss * 5 + students * 10 + migrants * 33 + tvs * 123 + scienses * 1000 + overseers * 9000 + childs * 25000 + spams * 69000 + researchers * 1240000 + tests * 75000000 + robos * 690000000 + zeppelins * 2200000000 + neuros * 13500000000 + SPACEHYPNOLASERs * 999999999999;
+                (moni += moniPS/10);
                 document.getElementById('monni').innerHTML = abbreviateNumber(moni);
-            }, 1000)
+            }, 100)
             
             //ДОБАВЛЯТЬ СЮДА УЛУЧШЕНИЯ
             setInterval(function moniPerSecond(){
