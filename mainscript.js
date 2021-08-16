@@ -1,3 +1,19 @@
+function hideAll() {
+	document.getElementById("cum1").classList.remove("yeshow");
+	document.getElementById("cum1").classList.add("noshow");
+	document.getElementById("cum2").classList.remove("yeshow");
+	document.getElementById("cum2").classList.add("noshow");
+	document.getElementById("cum3").classList.remove("yeshow");
+	document.getElementById("cum3").classList.add("noshow");
+	document.getElementById("cum4").classList.remove("yeshow");
+	document.getElementById("cum4").classList.add("noshow");
+	document.getElementById("cum4").classList.remove("cover1");
+	document.getElementById("cover1").classList.add("noshow");
+	document.getElementById("cover2").classList.add("noshow");
+	document.getElementById("cover3").classList.add("noshow");
+	document.getElementById("cover4").classList.add("noshow");
+}
+
 function baka1toggle() {
 	hideAll();
 	document.getElementById("cum1").classList.remove("noshow");
@@ -25,22 +41,6 @@ function baka4toggle() {
 	document.getElementById("cum4").classList.add("yeshow");
 	document.getElementById("cover4").classList.remove("noshow");
 	document.getElementById("cover4").classList.add("yeshow");
-}
-
-function hideAll() {
-	document.getElementById("cum1").classList.remove("yeshow");
-	document.getElementById("cum1").classList.add("noshow");
-	document.getElementById("cum2").classList.remove("yeshow");
-	document.getElementById("cum2").classList.add("noshow");
-	document.getElementById("cum3").classList.remove("yeshow");
-	document.getElementById("cum3").classList.add("noshow");
-	document.getElementById("cum4").classList.remove("yeshow");
-	document.getElementById("cum4").classList.add("noshow");
-	document.getElementById("cum4").classList.remove("cover1");
-	document.getElementById("cover1").classList.add("noshow");
-	document.getElementById("cover2").classList.add("noshow");
-	document.getElementById("cover3").classList.add("noshow");
-	document.getElementById("cover4").classList.add("noshow");
 }
 
 //ОБЪЯВЛЯТЬ ЗДЕСЬ УЛУЧШЕНИЯ
