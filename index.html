@@ -2,1571 +2,436 @@
 <!--
 ИТАК
 Список Дел
-
 анимация:
-
 анимация главной кнопки
-
 НАДО ЖЕ ЕЩЕ МИКРОЧЕЛИКОВ СДЕЛАТЬ
-
 кароче анимацию изучить НАДО
-
 поправить силу улучшений
-
-
 добавить кнопку справки
-
 подумать немного о названиях удучшений
-
 НО ГЛАВНОЕ ЭТО ДОБАВИТЬ УЖЕ АНИМАЦИЮ
 -->
 <html>
-    <head>
-        <!--<link href='http://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic'
-rel='stylesheet' type='text/css'>-->
-        <!-- бесполезная жопа-->
-        <meta charset="utf-8">
-        <title>Depresso Pharmacy</title>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-            html {
-                font-family: 'Press Start 2P', cursive;
-                font-size: 15px;
-                font-weight: bold;
-                background-color: #343F3E
-};
-            body{
-            margin: 0;
-            }
-            header{
-                height: 200px;
-                background-color: #343F3E;
-                background-image: url(https://static.themoscowtimes.com/image/article_1360/ad/TASS31128345.jpg);
-                background-size: cover;
-                background-position: 50% 25%;
-                margin: 0;
-            }
-            .coom{
-                background-color: pink;
-                margin: 0;
-                background-image: url(https://sher.media/wp-content/uploads/2020/10/2795340439_bacf3599c7_o.jpg);
-            }
-            .allcover{
-                height: 100%;
-                width: 100%;
-                background-color: rgb(0, 0, 0,.5);
-                position: fixed;
-                top: 0;
-                left: 0;
-                display: none;
-            }
-            #wellcum{
-                line-height: 45px;
-            }
-            .spravka{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 600px;
-                height: 900px;
-                padding: 10px;
-                color: white;
-                line-height: 28px;
-                background-color: #343F3E;
-                transform: translate(-50%, -10%);
-                display: none;
-            }
-            #inhead{
-                display: flex;
-                justify-content: space-between;
-                align-content: center;
-            }
-            .inheader{
-                height:150px;
-                width: 150px;
-                margin: 2%;
-            }
-            #funny{
-                background-size: contain;
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-            #nofunny{
-                background-image: url(https://i.imgur.com/O2jIiHu_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-size: contain;
-            }
-            #iheader{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-around;
-                align-content: center;
-            }
-            .contact{
-                height:30px;
-                width: 60px;
-                background-color: #343F3E;
-                margin: 4%;
-                border-radius: 9px;
-                text-align: center;
-                line-height: 30px;
-                color: white;
-            }
-            .contact2{
-                height:60px;
-                width: 60px;
-                background-color: #343F3E;
-                margin: 4%;
-            }
-            #kasha{
-                
-                background-image: url(https://i.imgur.com/qtpAHS1_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-size: cover;
-                border-radius: 15px;
-            }
-            /*заменить потом на кликер пуры*/
-            #pura{
-                background-image: url(https://i.imgur.com/aa5gPNs_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-size: cover;
-                border-radius: 15px;
-            }
-            /*ауф*/
-            #bruh{
-                display: flex;
-                flex-direction: column;
-                align-items: stretch;
-                justify-content: center;
-                background-color: rgba(10,10,10,.4);
-                width: 85%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .shit{
-                overflow: hidden;
-                height: 600px;
-                margin: 1% 2%;
-                background-color: #343F3E;
-                background-image: url(https://i.imgur.com/JJNqDml_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-size: cover;
-                background-position: bottom;
-                border-radius: 7px;
-            }
-            .textpain{
-                height: 20px;
-                width: 494px;
-                margin-left: 50%;
-                margin-top: 4%;
-                transform: translate(-50%, -50%);
-                background-color: rgba(6, 20, 9,.6);
-                color: white;
-                line-height: 22px;
-                text-align: center;
-            }
-            .pain{
-                width: 580px;
-                height: 69px;
-                margin-left: 50%;
-                margin-top: 3.5%;
-                transform: translate(-50%, -50%);
-                background-color: rgba(6, 20, 9,.6);
-                color: white;
-                text-align: center;
-                line-height: 79px;
-                font-size: 50px;
-            }
-            .painPS{
-                width: 200px;
-                height: 20px;
-                margin-left: 50%;
-                margin-top: 0;
-                transform: translate(-50%,-150%);
-                background-color: rgba(6,20,9,.6);
-                color: white;
-                text-align: center;
-                line-height: 22px;
-                text-align: center;
-            }
-            /*подумать над пикчейи размером, добаыить котику анимацию и возможно какойнибудть эффект на задний план*/
-            @keyframes rotate{
+	<head>
+		<!-- <link href='http://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'> -->
+		<meta charset="utf-8" />
+		<title>Depresso Pharmacy</title>
 
-                from{
-                    
-                transform: rotate(-15deg) translate(-50%, -50%);
-                }
-                to{
-                    
-                transform: rotate(15deg) translate(-50%, -50%);
-                }
-                
-            }
-            .tabletka{
-                
-                animation-duration: 3s;
-                animation-name: rotate;
-                animation-iteration-count: infinite;
-                animation-direction: alternate;
-                transform-origin: top left;
-                animation-timing-function: ease-in-out;
-                height: 30%;
-                width: 30%;
-                position: relative;
-                top: 20%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background-color: transparent;
-                border: none;
-                background-image: url(https://i.imgur.com/8ariOk6_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                touch-action: manipulation;
-            }
-            .anime{
-                height: 100px;
-                width: 100px;
-                background-color: white;
-                animation-duration: 5s;
-                animation-name: movenime;
-                animation-timing-function: linear;
-                display: none;
-            }
-            @keyframes movenime{
-                from{
-                    transform: translate(-10000%, 150%);
-                }
-                to{
-                    transform: translate(10000%, 150%);
-                }
-            }
-            .piss{ 
-                height: 100px;
-                margin: 1% 2%;
-                background-color: #94B0DA;
-                border-radius: 7px;
-            }
-            /*uwu*/
-            #sussy-baka{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-            }/*изменишь размер баки и крышка полетит в пизду*/
-            .bakacover{
-                height: 100%;
-                width: 100%;
-                background-color: rgba(0,0,0,0.1);
-                border-radius: 15px;
-                display: none;
-                box-shadow:inset 5px 5px 10px rgba(0,0,0,.5);
-                transform: translate(0, -112%);
-            }
-            .baka1{
-                /*background-image: url(https://i.imgur.com/bchbfa3_d.webp?maxwidth=640&shape=thumb&fidelity=medium);*/
-                height: 85px;
-                width: 20%;
-                border-radius: 15px;
-                background-color: #343F3E;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                color: white;
-                text-align:center;
-                line-height: 95px;
-                font-size: 50px;
-            }
-            .baka2{
-                /*background-image: url(https://i.imgur.com/J6Sq3Jc_d.webp?maxwidth=640&shape=thumb&fidelity=medium);*/
-                height: 85%;
-                width: 20%;
-                border-radius: 15px;
-                background-color: #343F3E;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                color: white;
-                text-align:center;
-                line-height: 95px;
-                font-size: 50px;
-            }
-            .baka3{
-                /*background-image: url(https://i.imgur.com/rzmFpkJ_d.webp?maxwidth=640&shape=thumb&fidelity=medium);*/
-                height: 85%;
-                width: 20%;
-                border-radius: 15px;
-                background-color: #343F3E;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                color: white;
-                text-align:center;
-                line-height: 95px;
-                font-size: 50px;
-            }
-            .baka4{
-                /*background-image: url(https://i.imgur.com/5FE8v7Q_d.webp?maxwidth=640&shape=thumb&fidelity=medium);*/
-                height: 85%;
-                width: 20%;
-                border-radius: 15px;
-                background-color: #343F3E;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                color: white;
-                text-align:center;
-                line-height: 95px;
-                font-size: 50px;
-            }
-            .cum{
-                margin: 1% 2%;
-                background-color: #8F91A2;
-                border-radius: 7px;
-            }
-            #yhoho{
-                display: flex;
-                flex-direction: column;
-                align-items: stretch;
-                justify-content: flex-start;
-            }
-            /*you've been GNOMED*/
-            .gnome{
-                height: 150px;
-                margin: 1% 2%;
-            }
-            #gnomo{
-                display: flex;
-                align-items: center;
-            }/*ВЫПАДАЮЩЕЕ ОПИСАНИЕ ПО КЛИКУ ДОБАВЬ УЖЕ*/
-            .up-pick{
-                height: 128px;
-                width: 128px;
-                background-color: #343F3E;
-                background-size: contain;
-                border-radius: 20px;
-                box-shadow: 5px 5px 10px rgba(0,0,0,.7);
-            }
-            /*с улучшениями вроде бы закончил*/
-            #clickWeighter{
-                background-image: url(https://i.imgur.com/56Qov9g_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-repeat: no-repeat;
-                background-position: center;
-                touch-action: manipulation;
-            }
-            #worker{
-                background-image: url(https://i.imgur.com/Tv1ZKYB_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-repeat: no-repeat;
-                touch-action: manipulation;
-            }
-            #migrant{
-                background-image: url(https://i.imgur.com/4N9wT1L_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-repeat: no-repeat;
-                touch-action: manipulation;
-            }
-            #child{
-                background-image: url(
-                    https://i.imgur.com/RGRBIeB_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-repeat: no-repeat;
-                touch-action: manipulation;
-            }
-            #robo{
-                background-image: url(https://i.imgur.com/y4dAkTX_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-size: 80%;
-                background-position: center;
-                background-repeat: no-repeat;
-                touch-action: manipulation;
-            }
-            #newsAds{
-                background-image: url(https://i.imgur.com/oXIUnDp_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-position: center;
-                background-repeat: no-repeat;
-                touch-action: manipulation;
-            }
-            #television{
-                background-image: url(https://i.imgur.com/1wOy6hz_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: 90%;
-                touch-action: manipulation;
-            }
-            #spam{
-                background-image: url(https://i.imgur.com/HhSHI3Q_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: 90%;
-                touch-action: manipulation;
-            }
-            #zeppelin{
-                background-image: url(https://i.imgur.com/eTLXuM2_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-position: center;
-                background-repeat: no-repeat;
-                touch-action: manipulation;
-            }
-            #student{
-                background-image: url(https://i.imgur.com/4gNJ39w_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: 160%;
-                touch-action: manipulation;
-            }
-            #sciense{
-                background-image: url(https://i.imgur.com/KxlUo6i_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-position: center;
-                background-repeat: no-repeat;
-                touch-action: manipulation;
-            }
-            #researcher{
-                background-image: url(https://i.imgur.com/xIIhfPE_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-position: center;
-                background-repeat: no-repeat;
-                touch-action: manipulation;
-            }
-            #neuro{
-                background-image: url(https://i.imgur.com/B9hWrlI_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-position: center;
-                background-repeat: no-repeat;
-                touch-action:manipulation;
-            }
-            #overseer{
-                background-image: url(https://i.imgur.com/DokQfrb_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-repeat: no-repeat;
-                background-position: center;
-                touch-action: manipulation;
-            }
-            #test{
-                background-image: url(https://i.imgur.com/cPudIh0_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-position: center;
-                background-repeat: no-repeat;
-                touch-action: manipulation;
-            }
-            #SPACEHYPNOLASER{
-                background-image: url(https://i.imgur.com/M5Unz4D_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                background-position: center;
-                background-repeat: no-repeat;
-                touch-action: manipulation;
-            }
-            #name-cost{
-                height: 128px;
-                width: 90%;
-                display: flex;
-                flex-direction: column;
-                align-items: stretch;
-                justify-content: center;
-            }
-            #name-bought{
-                display: flex;
-                justify-content: space-between;
-                height: 20%;
-            }
-            .name{
-                background-color: #505A5B;
-                color: white;
-                line-height: 25px;
-                box-shadow: 5px 5px 10px rgba(0,0,0,.7);
-            }
-            .bought{
-                width: auto;
-                background-color: #505A5B;
-                color: white;
-                text-align: right;
-                line-height: 25px;
-                box-shadow: 5px 5px 10px rgba(0,0,0,.7);
-            }
-            .cost{
-                height: 90px;
-                background-color: #505A5B;
-                opacity: 0.8;
-                color: white;
-                text-align: center;
-                line-height: 100px;
-                font-size: 35px;
-                box-shadow: 5px 5px 10px rgba(0,0,0,.7);
-                touch-action: manipulation;
-            }
-            .youNeedThis{
-                height: 100px;
-                background-color: rgb(148, 176, 218,.8);
-                padding: 20px;
-            }
-            #needThis{
-                display: flex;
-                justify-content: space-between;
-            }
-            #savlod{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-            }
-            .save{
-                width: 150px;
-                height: 70px;
-                margin: 5px 20px;
-                color: white;
-                background-color: #343F3E;
-                line-height: 35px;
-                text-align: center;
-                border-radius: 5px 20px;
-            }
-            .reset{
-                width: 135px;
-                height: 70px;
-                margin: 5px 20px;
-                color: white;
-                background-color: #343F3E;
-                line-height: 35px;
-                text-align: center;
-                border-radius: 5px 20px;
-            }
-            #inf{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-            }
-            .infoo{
-                height: 80px;
-                width: 80px;
-                border-radius: 40px;
-                background-position: center;
-                background-repeat: no-repeat;
-                touch-action: manipulation;
-                background-size: contain;
-                background-image: url(https://i.imgur.com/A207VkH_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                
-            }
-            .optimized{
-                height: 60px;
-                width: 269px;
-                color: white;
-                background-color: #343F3E;
-                font-size: 15px;
-                line-height: 8px;
-                text-align: center;
-                border-radius: 5px;
-                margin: 5px;
-            }
-             
-            .gameVersion{
-                height: 30px;
-                width: 269px;
-                color: white;
-                background-color: #343F3E;
-                line-height: 30px;
-                text-align: center;
-                border-radius: 5px;
-                margin: 5px;
-            }
-            
-            .cumm2{
-                display: none;
-            }
-            .cumm1{
-                display: block;
-            }
-            
-            .yeshow {display:block;}
-            .noshow {display:none;}
-            
-            .sqsh {
-                height: 28%;
-                width: 28%;
-            }
-            .unsqsh{
-                height: 30%;
-                width: 30%;
-            }
-            
-        </style>
-        <script>
-
-
-        function baka1toggle(){
-            hideAll();
-            document.getElementById("cum1").classList.remove("noshow");
-            document.getElementById("cum1").classList.add("yeshow");
-            document.getElementById("cover1").classList.remove("noshow");
-            document.getElementById("cover1").classList.add("yeshow");
-            
-        }
-        function baka2toggle(){
-            if(clickWeights>=10 && workers>=10 && newss>=10 && students>=10){
-            hideAll();
-            document.getElementById("cum2").classList.remove("noshow");
-            document.getElementById("cum2").classList.add("yeshow");
-            document.getElementById("cover2").classList.remove("noshow");
-            document.getElementById("cover2").classList.add("yeshow");
-            }else{
-                alert('купите по 10 едениц каждого улучшения для перехода на новую ступень')
-            }
-        }
-        function baka3toggle(){
-            if(migrants>=10 && tvs>=10 && scienses>=10 && overseers>=10){
-            hideAll();
-            document.getElementById("cum3").classList.remove("noshow");
-            document.getElementById("cum3").classList.add("yeshow");
-            document.getElementById("cover3").classList.remove("noshow");
-            document.getElementById("cover3").classList.add("yeshow");
-            }else{
-            alert('купите по 10 едениц каждого улучшения для перехода на новую ступень')
-            }
-        }
-        function baka4toggle(){
-            if(childs>=10 && spams>=10 && researchers>=10 && tests>=10){
-            hideAll();
-            document.getElementById("cum4").classList.remove("noshow");
-            document.getElementById("cum4").classList.add("yeshow");
-            document.getElementById("cover4").classList.remove("noshow");
-            document.getElementById("cover4").classList.add("yeshow");
-            }else{
-            alert('купите по 10 едениц каждого улучшения для перехода на новую ступень')
-            }
-        }
-        
-        
-        function hideAll(){
-            document.getElementById("cum1").classList.remove("yeshow");
-            document.getElementById("cum1").classList.add("noshow");
-            document.getElementById("cum2").classList.remove("yeshow");
-            document.getElementById("cum2").classList.add("noshow");
-            document.getElementById("cum3").classList.remove("yeshow");
-            document.getElementById("cum3").classList.add("noshow");
-            document.getElementById("cum4").classList.remove("yeshow");
-            document.getElementById("cum4").classList.add("noshow");
-            document.getElementById("cum4").classList.remove("cover1");
-            document.getElementById("cover1").classList.add("noshow");
-            document.getElementById("cover2").classList.add("noshow");
-            document.getElementById("cover3").classList.add("noshow");
-            document.getElementById("cover4").classList.add("noshow");
-        }
-        
-        
-        //ОБЪЯВЛЯТЬ ЗДЕСЬ УЛУЧШЕНИЯ
-            let moni = 0;
-            let moniPS = 0;
-            let clickWeight = 1;
-            let clickWeightCost = 10;
-            clickWeights = 0;
-            let workerCost = 35;
-            let workers = 0;
-            let newsCost = 222;
-            let newss = 0;
-            let studentCost = 1250;
-            let students = 0;
-            let migrantCost = 12500;
-            let migrants = 0;
-            let tvCost = 75000;
-            let tvs =0;
-            let scienseCost = 404000;
-            let scienses = 0;
-            let overseerCost = 2600000;
-            /*-*/
-            let overseers = 0;
-            let childCost = 26000000;
-            let childs = 0;
-            let spamCost = 183000000;
-            let spams = 0;
-            let researcherCost = 1299000000;
-            let researchers = 0;
-            let testCost = 10392000000;
-            let tests = 0;
-            let roboCost = 103920000000;
-            let robos = 0;
-            let zeppelinCost = 999999999999;
-            let zeppelins = 0;
-            let neuroCost = 6546000000000;
-            let neuros = 0;
-            let SPACEHYPNOLASERCost = 99999999999999;
-            let SPACEHYPNOLASERs = 0;
-            let newValue = 69;
-            
-            function addMoni(){
-                moni += clickWeight;
-                squishTheCat();
-                document.getElementById('monni').innerHTML = abbreviateNumber(moni);
-            }
-            function squishTheCat(){
-                document.getElementById("tbltk").classList.remove("unsqsh");
-                document.getElementById("tbltk").classList.add("sqsh");
-                setTimeout(unSquisTheCat,200);
-            }
-            
-            function unSquisTheCat(){
-                document.getElementById("tbltk").classList.remove("sqsh");
-                document.getElementById("tbltk").classList.add("unsqsh");
-            }
-            
-            function buyClickWeight(){
-                if(moni >= clickWeightCost){
-                    moni -= clickWeightCost;
-                    clickWeights++;
-                    clickWeight += 1;
-                    clickWeightCost = (10 * 1.15 ** clickWeights);
-                    document.getElementById('clickWeightCost').innerHTML = abbreviateNumber(clickWeightCost);
-                document.getElementById('clickWeights').innerHTML = clickWeights;
-                document.getElementById('monni').innerHTML = abbreviateNumber(moni);
-                }
-            }
-            
-            function buyWorker(){
-                if(moni >= workerCost){
-                moni -= workerCost;
-                workers++;
-                workerCost = (35 * 1.15 ** workers);
-                document.getElementById('workerCost').innerHTML = abbreviateNumber(workerCost);
-                document.getElementById('workers').innerHTML = workers;
-                document.getElementById('monni').innerHTML = abbreviateNumber(moni);
-                }
-            }
-            
-            function buyNews(){
-                if(moni >= newsCost){
-                moni -= newsCost;
-                newss++;
-                newsCost = (222 * 1.15 ** newss);
-                document.getElementById('newsCost').innerHTML = abbreviateNumber(newsCost);
-                document.getElementById('newss').innerHTML = newss;
-                document.getElementById('monni').innerHTML = abbreviateNumber(moni);
-                }
-            }
-            
-            function buyStudent(){
-                if(moni >= studentCost){
-                moni -= studentCost;
-                students++;
-                studentCost = (1250 * 1.15 ** students);
-                document.getElementById('studentCost').innerHTML = abbreviateNumber(studentCost);
-                document.getElementById('students').innerHTML = students;
-                document.getElementById('monni').innerHTML = abbreviateNumber(moni);
-                }
-            }
-            
-            function buyMigrant(){
-                if(moni >= migrantCost){
-                moni -= migrantCost;
-                migrants++;
-                migrantCost = (12500 * 1.14 ** migrants);
-                document.getElementById('migrantCost').innerHTML = abbreviateNumber(migrantCost);
-                document.getElementById('migrants').innerHTML = migrants;
-                document.getElementById('monni').innerHTML = abbreviateNumber(moni);
-                }
-            }
-            
-            function buyTv(){
-                if(moni >= tvCost){
-                moni -= tvCost;
-                tvs++;
-                tvCost = (75000 * 1.15 ** tvs);
-                document.getElementById('tvCost').innerHTML = abbreviateNumber(tvCost);
-                document.getElementById('tvs').innerHTML = tvs;
-                document.getElementById('monni').innerHTML = abbreviateNumber(moni);
-                }
-            }
-            
-            function buySciense(){
-                if(moni >= scienseCost){
-                moni -= scienseCost;
-                scienses++;
-                scienseCost = (104000 * 1.16 ** scienses);
-                document.getElementById('scienseCost').innerHTML = abbreviateNumber(scienseCost);
-                document.getElementById('scienses').innerHTML = scienses;
-                document.getElementById('monni').innerHTML = abbreviateNumber(moni);
-                }
-            }
-            
-            function buyOverseer(){
-                if(moni >= overseerCost){
-                moni -= overseerCost;
-                overseers++;
-                overseerCost = (2600000 * 1.14 ** overseers);
-                document.getElementById('overseerCost').innerHTML = abbreviateNumber(overseerCost);
-                document.getElementById('overseers').innerHTML = overseers;
-                document.getElementById('monni').innerHTML = abbreviateNumber(moni);
-                }
-            }
-            
-            function buyChild(){
-                if(moni >= childCost){
-                moni -= childCost;
-                childs++;
-                childCost = (26000000 * 1.14 ** childs);
-                document.getElementById('childCost').innerHTML = abbreviateNumber(childCost);
-                document.getElementById('childs').innerHTML = childs;
-                document.getElementById('monni').innerHTML = abbreviateNumber(moni);
-                }
-            }
-            
-            function buySpam(){
-                if(moni >= spamCost){
-                moni -= spamCost;
-                spams++;
-                spamCost = (183000000 * 1.15 ** spams);
-                document.getElementById('spamCost').innerHTML = abbreviateNumber(spamCost);
-                document.getElementById('spams').innerHTML = spams;
-                document.getElementById('monni').innerHTML = abbreviateNumber(moni);
-                }
-            }
-            
-            function buyResearcher(){
-                if(moni >= researcherCost){
-                moni -= researcherCost;
-                researchers++;
-                researcherCost = Math.ceil(1299000000 * 1.17 ** researchers);
-                document.getElementById('researcherCost').innerHTML = abbreviateNumber(researcherCost);
-                document.getElementById('researchers').innerHTML = researchers;
-                document.getElementById('monni').innerHTML = abbreviateNumber(moni);
-                }
-            }
-            
-            function buyTest(){
-                if(moni >= testCost){
-                moni -= testCost;
-                tests++;
-                testCost = Math.ceil(10390000000 * 1.25 ** tests);
-                document.getElementById('testCost').innerHTML = abbreviateNumber(testCost);
-                document.getElementById('tests').innerHTML = tests;
-                document.getElementById('monni').innerHTML = abbreviateNumber(moni);
-                }
-            }
-            
-            function buyRobo(){
-                if(moni >= roboCost){
-                moni -= roboCost;
-                robos++;
-                roboCost = Math.ceil(103920000000 * 1.21 ** robos);
-                document.getElementById('roboCost').innerHTML = abbreviateNumber(roboCost);
-                document.getElementById('robos').innerHTML = robos;
-                document.getElementById('monni').innerHTML = abbreviateNumber(moni);
-                }
-            }
-            
-            function buyZeppelin(){
-                if(moni >= zeppelinCost){
-                moni -= zeppelinCost;
-                zeppelins++;
-                zeppelinCost = 727400000000 * 1.18 ** zeppelins;
-                document.getElementById('zeppelinCost').innerHTML = abbreviateNumber(zeppelinCost);
-                document.getElementById('zeppelins').innerHTML = zeppelins;
-                document.getElementById('monni').innerHTML = abbreviateNumber(moni);
-                }
-            }
-            
-            function buyNeuro(){
-                if(moni >= neuroCost){
-                moni -= neuroCost;
-                neuros++;
-                neuroCost = Math.ceil(6546000000000 * 1.13 ** neuros);
-                document.getElementById('neuroCost').innerHTML = abbreviateNumber(neuroCost);
-                document.getElementById('neuros').innerHTML = neuros;
-                document.getElementById('monni').innerHTML = abbreviateNumber(moni);
-                }
-            }
-            
-            function buySPACEHYPNOLASER(){
-                if(moni >= SPACEHYPNOLASERCost){
-                moni -= SPACEHYPNOLASERCost;
-                SPACEHYPNOLASERs++;
-                SPACEHYPNOLASERCost = (99999999999999 * 1.15 ** SPACEHYPNOLASERs);
-                document.getElementById('SPACEHYPNOLASERCost').innerHTML = abbreviateNumber(SPACEHYPNOLASERCost);;
-                document.getElementById('SPACEHYPNOLASERs').innerHTML = SPACEHYPNOLASERs;
-                document.getElementById('monni').innerHTML = abbreviateNumber(moni);
-                }
-            }
-            
-            
-            
-            //ДОБАВЛЯТЬ УЛУЧШЕНИЯ СЮДА
-            function saveGame(){
-                let gameSave = {
-                    moni: moni,
-                    moniPS: moniPS,
-                    clickWeight: clickWeight,
-                    clickWeightCost: clickWeightCost,
-                    clickWeights:clickWeights,
-                    workerCost: workerCost,
-                    workers: workers,
-                    newsCost:newsCost,
-                    newss: newss,
-                    studentCost: studentCost,
-                    students: students,
-                    migrantCost: migrantCost,
-                    migrants: migrants,
-                    tvCost: tvCost,
-                    tvs: tvs,
-                    scienseCost: scienseCost,
-                    scienses: scienses,
-                    overseerCost: overseerCost,
-                    overseers: overseers,
-                    childCost: childCost,
-                    childs: childs,
-                    spamCost: spamCost,
-                    spams: spams,
-                    researcherCost: researcherCost,
-                    researchers: researchers,
-                    testCost: testCost,
-                    tests: tests,
-                    roboCost: roboCost,
-                    robos: robos,
-                    zeppelinCost: zeppelinCost,
-                    zeppelins: zeppelins,
-                    neuroCost: neuroCost,
-                    neuros: neuros,
-                    SPACEHYPNOLASERCost: SPACEHYPNOLASERCost,
-                    SPACEHYPNOLASERs: SPACEHYPNOLASERs,
-                    s: s,
-                };
-                localStorage.setItem("gameSave", JSON.stringify(gameSave));
-            }
-            
-            //ДОБАВЛЯТЬ УЛУЧШЕНИЯ СЮДА
-            //МАТЕРЬ БОЖЬЯ, КАК ЖЕ ИХ МНОГО
-            function loadGame(){
-                let savedGame = JSON.parse(localStorage.getItem("gameSave"));
-                if(typeof savedGame.moni 
-                !== "undefined") moni = savedGame.moni;
-                if(typeof savedGame.moniPS 
-                !== "undefined") moniPS = savedGame.moniPS;
-                if(typeof savedGame.clickWeight 
-                !== "undefined") clickWeight = savedGame.clickWeight;
-                if(typeof savedGame.clickWeightCost 
-                !== "undefined") clickWeightCost = savedGame.clickWeightCost;
-                if(typeof savedGame.clickWeights 
-                !== "undefined") clickWeights = savedGame.clickWeights;
-                if(typeof savedGame.workerCost 
-                !== "undefined") workerCost = savedGame.workerCost;
-                if(typeof savedGame.workers 
-                !== "undefined") workers = savedGame.workers;
-                if(typeof savedGame.newsCost 
-                !== "undefined") newsCost = savedGame.newsCost;
-                if(typeof savedGame.newss 
-                !== "undefined") newss = savedGame.newss;
-                if(typeof savedGame.studentCost 
-                !== "undefined") studentCost = savedGame.studentCost;
-                if(typeof savedGame.students 
-                !== "undefined") students = savedGame.students;
-                if(typeof savedGame.migrantCost 
-                !== "undefined") migrantCost = savedGame.migrantCost;
-                if(typeof savedGame.migrants 
-                !== "undefined") migrants = savedGame.migrants;
-                if(typeof savedGame.tvCost 
-                !== "undefined") tvCost = savedGame.tvCost;
-                if(typeof savedGame.tvs 
-                !== "undefined") tvs = savedGame.tvs;
-                if(typeof savedGame.scienseCost 
-                !== "undefined") scienseCost = savedGame.scienseCost;
-                if(typeof savedGame.scienses 
-                !== "undefined") scienses = savedGame.scienses;
-                if(typeof savedGame.overseerCost 
-                !== "undefined") overseerCost = savedGame.overseerCost;
-                if(typeof savedGame.overseers 
-                !== "undefined") overseers = savedGame.overseers;
-                if(typeof savedGame.childCost 
-                !== "undefined") childCost = savedGame.childCost;
-                if(typeof savedGame.childs 
-                !== "undefined") childs = savedGame.childs;
-                if(typeof savedGame.spamCost 
-                !== "undefined") spamCost = savedGame.spamCost;
-                if(typeof savedGame.spams 
-                !== "undefined") spams = savedGame.spams;
-                if(typeof savedGame.researcherCost 
-                !== "undefined") researcherCost = savedGame.researcherCost;
-                if(typeof savedGame.researchers 
-                !== "undefined") researchers = savedGame.researchers;
-                if(typeof savedGame.testCost 
-                !== "undefined") testCost = savedGame.testCost;
-                if(typeof savedGame.tests 
-                !== "undefined") tests = savedGame.tests;
-                if(typeof savedGame.roboCost 
-                !== "undefined") roboCost = savedGame.roboCost;
-                if(typeof savedGame.robos 
-                !== "undefined") robos = savedGame.robos;
-                if(typeof savedGame.zeppelinCost 
-                !== "undefined") zeppelinCost = savedGame.zeppelinCost;
-                if(typeof savedGame.zeppelins 
-                !== "undefined") zeppelins = savedGame.zeppelins;
-                if(typeof savedGame.neuroCost 
-                !== "undefined") neuroCost = savedGame.neuroCost;
-                if(typeof savedGame.neuros 
-                !== "undefined") neuros = savedGame.neuros;
-                if(typeof savedGame.SPACEHYPNOLASERCost 
-                !== "undefined") SPACEHYPNOLASERCost = savedGame.SPACEHYPNOLASERCost;
-                if(typeof savedGame.SPACEHYPNOLASERs 
-                !== "undefined") SPACEHYPNOLASERs = savedGame.SPACEHYPNOLASERs;
-                if(typeof savedGame.s 
-                !== "undefined") s = savedGame.s;
-            }
-            
-            let s = 0;
-            //ДОБАВЛЯТЬ УЛУЧШЕНИЯ СЮДА
-            window.onload = function(){
-                loadGame();
-                if(s == 0){
-                    s++;
-                    showSpravka();
-                    
-                }
-                saveGame();
-                document.getElementById('clickWeightCost').innerHTML = abbreviateNumber(clickWeightCost);
-                document.getElementById('clickWeights').innerHTML = clickWeights;
-                document.getElementById('workerCost').innerHTML = abbreviateNumber(workerCost);
-                document.getElementById('workers').innerHTML = workers;
-                document.getElementById('newsCost').innerHTML = abbreviateNumber(newsCost);
-                document.getElementById('newss').innerHTML = newss;
-                document.getElementById('studentCost').innerHTML = abbreviateNumber(studentCost);
-                document.getElementById('students').innerHTML = students;
-                document.getElementById('migrantCost').innerHTML = abbreviateNumber(migrantCost);
-                document.getElementById('migrants').innerHTML = migrants;
-                document.getElementById('tvCost').innerHTML = abbreviateNumber(tvCost);
-                document.getElementById('tvs').innerHTML = tvs;
-                document.getElementById('scienseCost').innerHTML = abbreviateNumber(scienseCost);
-                document.getElementById('scienses').innerHTML = scienses;
-                document.getElementById('overseerCost').innerHTML = abbreviateNumber(overseerCost);
-                document.getElementById('overseers').innerHTML = overseers;
-                document.getElementById('childCost').innerHTML = abbreviateNumber(childCost);
-                document.getElementById('childs').innerHTML = childs;
-                document.getElementById('spamCost').innerHTML = abbreviateNumber(spamCost);
-                document.getElementById('spams').innerHTML = spams;
-                document.getElementById('researcherCost').innerHTML = abbreviateNumber(researcherCost);
-                document.getElementById('researchers').innerHTML = researchers;
-                document.getElementById('testCost').innerHTML = abbreviateNumber(testCost);
-                document.getElementById('tests').innerHTML = tests;
-                document.getElementById('roboCost').innerHTML = abbreviateNumber(roboCost);
-                document.getElementById('robos').innerHTML = robos;
-                document.getElementById('zeppelinCost').innerHTML = abbreviateNumber(zeppelinCost);
-                document.getElementById('zeppelins').innerHTML = zeppelins;
-                document.getElementById('neuroCost').innerHTML = abbreviateNumber(neuroCost);
-                document.getElementById('neuros').innerHTML = neuros;
-                document.getElementById('SPACEHYPNOLASERCost').innerHTML = abbreviateNumber(SPACEHYPNOLASERCost);
-                document.getElementById('SPACEHYPNOLASERs').innerHTML = SPACEHYPNOLASERs;
-                document.getElementById('monni').innerHTML = abbreviateNumber(moni);
-                document.getElementById('moniPS').innerHTML = abbreviateNumber(moniPS);
-            };
-            
-            function gameReset(){
-                if(confirm("вы уверены, что хотите сбросить ВЕСЬ прогресс?")){
-                if(confirm("вы сделаете людей снова счастливыми, вы у в е р е н ы?")){
-                    alert("хорошо, так тому и быть");
-                    let gameSave = {};
-                    localStorage.setItem("gameSave", JSON.stringify(gameSave));
-                    location.reload();
-                }
-                }
-            }
-            
-            function showSpravka(){
-            document.getElementById("allcov").classList.remove("noshow");
-            document.getElementById("allcov").classList.add("yeshow");
-            document.getElementById("sprav").classList.remove("noshow");
-            document.getElementById("sprav").classList.add("yeshow");
-            }
-            
-            function hideSpravka(){
-                document.getElementById("allcov").classList.remove("yeshow");
-            document.getElementById("allcov").classList.add("noshow");
-            document.getElementById("sprav").classList.remove("yeshow");
-            document.getElementById("sprav").classList.add("noshow");
-            }
-            
-            
-            /*function abbreviateNumber(value) {
-    let newValue = value;
-    if (value >= 1000) {
-        let suffixes = ["", "k", "m", "b","t"];
-        let suffixNum = Math.floor( (""+value).length/5 );
-        let shortValue = '';
-        for (let precision = 3; precision >= 1; precision--) {
-            shortValue = parseFloat( (suffixNum != 0 ? (value / Math.pow(1000,suffixNum) ) : value).toPrecision(precision));
-            let dotLessShortValue = (shortValue + '').replace(/[^a-zA-Z 0-9]+/g,'');
-            if (dotLessShortValue.length <= 2) { break; }
-        }
-        if (shortValue % 1 != 0)  shortNum = shortValue.toFixed(1);
-        newValue = shortValue+suffixes[suffixNum];
-    }
-    return newValue;
-}*/
-            
-            
-            let i = 0;
-            let suffixes = ["р","т.р","м.р","б.р","тр.р","кв.р","но.р","брух"];
-            function abbreviateNumber(value){
-                let newValue = value;
-                if (newValue < 1000){
-                    newValue = Math.floor(newValue*100)/100;
-                    duck = newValue + suffixes[i];
-                    i=0;
-                } else{
-                newValue /= 1000;
-                    i++;
-                    abbreviateNumber(newValue);
-            }return duck;
-            }
-            
-            
-            setInterval(function(){
-                saveGame();
-            }, 30000);
-            
-            
-            
-            //ДОБАВЛЯТЬ УЛУЧШЕНТЯ СЮДА
-            setInterval(function(){
-                moni += (workers + newss * 5 + students * 10 + migrants * 33 + tvs * 123 + scienses * 1000 + overseers * 9000 + childs * 25000 + spams * 69000 + researchers * 1240000 + tests * 75000000 + robos * 690000000 + zeppelins * 2200000000 + neuros * 13500000000 + SPACEHYPNOLASERs * 999999999999)/10;
-                document.getElementById('monni').innerHTML = abbreviateNumber(moni);
-            }, 100)
-            
-            //ДОБАВЛЯТЬ СЮДА УЛУЧШЕНИЯ
-            setInterval(function moniPerSecond(){
-                moniPS = (workers + newss * 5 + students * 10 + migrants * 33 + tvs * 123 + scienses * 1000 + overseers * 9000 + childs * 25000 + spams * 69000 + researchers * 1240000 + tests * 75000000 + robos * 690000000 + zeppelins * 2200000000 + neuros * 13500000000 + SPACEHYPNOLASERs * 999999999999)
-                document.getElementById('moniPS').innerHTML = abbreviateNumber(moniPS);
-            }, 100);
-            
-            
-        </script>
-    </head>
-    <body>
-        <div class="coom">
-        <header>
-            <div id="inhead">
-                <div id="nofunny" class="inheader">
-                </div>
-                <div id="funny" class="inheader">
-                </div>
-                <div id="iheader" class="inheader">
-                <div class="contact">
-                    каша
-                </div>
-                <div id="inheader"class="contact">
-                    пура
-                </div>
-                <a id="kasha"class="contact2"
-                    href="https://vk.com/bruh__momentum">
-                </a>
-                <a id="pura"
-                    class="contact2" 
-                    href="https://vk.com/yappppp">
-                </a>
-                </div>
-            </div>
-        </header>
-        <div id="bruh">
-            <div class="shit">
-                <div class="textpain">
-                    Заработок с угробленных жизней:
-                </div>
-                <div class="pain">
-                    <span id="monni">0</span>
-                </div>
-                <div class="painPS">
-                    <span id="moniPS">0</span>/сек
-                </div>
-                <div id="tbltk" class="tabletka" onclick="addMoni(clickWeight)">
-                </div>
-                <div class="anime">
-                    
-                </div>
-            </div>
-            <div id="sussy-baka" class="piss">
-                <div class="baka1"
-                onclick="baka1toggle();">
-                    I
-                    <div id="cover1" class="bakacover">
-                    </div>
-                </div>
-                <div class="baka2"
-                onclick="baka2toggle();">
-                    II
-                    <div id="cover2" class="bakacover">
-                    </div>
-                </div>
-                <div class="baka3"
-                onclick="baka3toggle();">
-                    III
-                    <div id="cover3" class="bakacover">
-                    </div>
-                </div>
-                <div class="baka4"
-                onclick="baka4toggle();">
-                    IV 
-                    <div id="cover4" class="bakacover">
-                    </div>
-                </div>
-            </div>
-            <div id="cum1" class="cumm1">
-            <div id="yhoho" class="cum">
-                <div id="gnomo" class="gnome">
-                    <div id="clickWeighter" class="up-pick" >
-                        <!--подумать про onClick-->
-                    <!--ОЧЕНЬ ХОРОШО ПОДУМАТЬ-->
-                    </div>
-                    <div id="name-cost">
-                        <!--имя/к, цена-->
-                        <div id="name-bought">
-                            <!--имя,куп-->
-                            <div class="name">
-                                усиление клика
-                            </div>
-                            <div class=" bought">
-                                куплено:<span id="clickWeights">0</span>  
-                            </div>
-                        </div>
-                        <div class="cost" onclick="buyClickWeight()">
-                            ЦЕНА: <span id="clickWeightCost">10</span>
-                        </div>
-                    </div>
-                </div>
-                <div id="gnomo" class="gnome">
-                    <div id="worker" class="up-pick">
-                    </div>
-                    <div id="name-cost">
-                        <!--имя/к, цена-->
-                        <div id="name-bought">
-                            <!--имя,куп-->
-                            <div class="name">
-                                рабочий
-                            </div>
-                            <div class=" bought">
-                                куплено:<span id="workers">0</span>  
-                            </div>
-                        </div>
-                        <div class="cost" onclick="buyWorker()">
-                            ЦЕНА: <span id="workerCost">10</span>
-                        </div>
-                    </div>
-                </div>
-                <div id="gnomo" class="gnome">
-                    <div id="newsAds" class="up-pick">
-                    </div>
-                    <div id="name-cost">
-                        <!--имя/к, цена-->
-                        <div id="name-bought">
-                            <!--имя,куп-->
-                            <div class="name">
-                                реклама в новостях
-                            </div>
-                            <div class=" bought">
-                                куплено: <span id="newss">0</span>  
-                            </div>
-                        </div>
-                        <div class="cost"
-                        onclick="buyNews()">
-                            ЦЕНА: <span id="newsCost">35
-                                </span>
-                        </div>
-                    </div>
-                </div>
-                <div id="gnomo" class="gnome">
-                    <div id="student" class="up-pick">
-                    </div>
-                    <div id="name-cost">
-                        <!--имя/к, цена-->
-                        <div id="name-bought">
-                            <!--имя,куп-->
-                            <div class="name">
-                                  студент исследователь
-                            </div>
-                            <div class=" bought">
-                                куплено: <span id="students">0
-                                </span>
-                            </div>
-                        </div>
-                        <div class="cost"
-                        onclick="buyStudent()">
-                            ЦЕНА: <span id="studentCost">222</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <div id="cum2" class="cumm2">
-            <div id="yhoho" class="cum">
-                <div id="gnomo" class="gnome">
-                    <div id="migrant" class="up-pick">
-                    </div>
-                    <div id="name-cost">
-                        <!--имя/к, цена-->
-                        <div id="name-bought">
-                            <!--имя,куп-->
-                            <div class="name">
-                                  рабочий мигрант
-                            </div>
-                            <div class=" bought">
-                                куплено:<span id="migrants">0</span>  
-                            </div>
-                        </div>
-                        <div class="cost" onclick="buyMigrant()">
-                            ЦЕНА: <span id="migrantCost">1250</span>
-                        </div>
-                    </div>
-                </div>
-                <div id="gnomo" class="gnome">
-                    <div id="television" class="up-pick">
-                    </div>
-                    <div id="name-cost">
-                        <!--имя/к, цена-->
-                        <div id="name-bought">
-                            <!--имя,куп-->
-                            <div class="name">
-                                  реклама нв ТВ
-                            </div>
-                            <div class=" bought">
-                                куплено: <span id="tvs">0</span>  
-                            </div>
-                        </div>
-                        <div class="cost"
-                        onclick="buyTv()">
-                            ЦЕНА: <span id="tvCost">12500
-                                </span>
-                        </div>
-                    </div>
-                </div>
-                <div id="gnomo" class="gnome">
-                    <div id="sciense" class="up-pick">
-                    </div>
-                    <div id="name-cost">
-                        <!--имя/к, цена-->
-                        <div id="name-bought">
-                            <!--имя,куп-->
-                            <div class="name">
-                                недоплаченный ученый
-                            </div>
-                            <div class=" bought">
-                                куплено: <span id="scienses">0
-                                </span>
-                            </div>
-                        </div>
-                        <div class="cost"
-                        onclick="buySciense()">
-                            ЦЕНА: <span id="scienseCost">75000</span>
-                        </div>
-                    </div>
-                </div>
-                <div id="gnomo" class="gnome">
-                    <div id="overseer" class="up-pick">
-                    </div>
-                    <div id="name-cost">
-                        <!--имя/к, цена-->
-                        <div id="name-bought">
-                            <!--имя,куп-->
-                            <div class="name"> надзиратель
-                            </div>
-                            <div class=" bought">
-                                куплено:<span id="overseers">0</span> 
-                            </div>
-                        </div>
-                        <div class="cost"
-                        onclick="buyOverseer()">
-                            ЦЕНА: <span id="overseerCost">404000</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <div id="cum3" class="cumm2">
-            <div id="yhoho" class="cum">
-                
-                
-                <div id="gnomo" class="gnome">
-                    <div id="child" class="up-pick">
-                    </div>
-                    <div id="name-cost">
-                        <!--имя/к, цена-->
-                        <div id="name-bought">
-                            <!--имя,куп-->
-                            <div class="name">
-                                детский труд
-                            </div>
-                            <div class=" bought">
-                                куплено:<span id="childs">0</span>  
-                            </div>
-                        </div>
-                        <div class="cost" onclick="buyChild()">
-                            ЦЕНА: <span id="childCost">26000000</span>
-                        </div>
-                    </div>
-                </div>
-                <div id="gnomo" class="gnome">
-                    <div id="spam" class="up-pick">
-                    </div>
-                    <div id="name-cost">
-                        <!--имя/к, цена-->
-                        <div id="name-bought">
-                            <!--имя,куп-->
-                            <div class="name">
-                                  спам реклама
-                            </div>
-                            <div class=" bought">
-                                куплено: <span id="spams">0</span>  
-                            </div>
-                        </div>
-                        <div class="cost"
-                        onclick="buySpam()">
-                            ЦЕНА: <span id="spamCost">183000000
-                                </span>
-                        </div>
-                    </div>
-                </div>
-                <div id="gnomo" class="gnome">
-                    <div id="researcher" class="up-pick">
-                    </div>
-                    <div id="name-cost">
-                        <!--имя/к, цена-->
-                        <div id="name-bought">
-                            <!--имя,куп-->
-                            <div class="name">
-                            исследователь высшего класса
-                            </div>
-                            <div class=" bought">
-                                куплено: <span id="researchers">0
-                                </span>
-                            </div>
-                        </div>
-                        <div class="cost"
-                        onclick="buyResearcher()">
-                            ЦЕНА: <span id="researcherCost">1299000000</span>
-                        </div>
-                    </div>
-                </div>
-                <div id="gnomo" class="gnome">
-                    <div id="test" class="up-pick">
-                    </div>
-                    <div id="name-cost">
-                        <!--имя/к, цена-->
-                        <div id="name-bought">
-                            <!--имя,куп-->
-                            <div class="name"> тест препаратов на рабочих
-                            </div>
-                            <div class=" bought">
-                                куплено:<span id="tests">0</span> 
-                            </div>
-                        </div>
-                        <div class="cost"
-                        onclick="buyTest()">
-                            ЦЕНА: <span id="testCost">10392000000</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <div id="cum4" class="cumm2">
-            <div id="yhoho" class="cum">
-                
-                
-                <div id="gnomo" class="gnome">
-                    <div id="robo" class="up-pick">
-                    </div>
-                    <div id="name-cost">
-                        <!--имя/к, цена-->
-                        <div id="name-bought">
-                            <!--имя,куп-->
-                            <div class="name">
-                                  замена рабочего роботом
-                            </div>
-                            <div class=" bought">
-                                куплено:<span id="robos">0</span>  
-                            </div>
-                        </div>
-                        <div class="cost" onclick="buyRobo()">
-                            ЦЕНА: <span id="roboCost">103920000000</span>
-                        </div>
-                    </div>
-                </div>
-                <div id="gnomo" class="gnome">
-                    <div id="zeppelin" class="up-pick">
-                    </div>
-                    <div id="name-cost">
-                        <!--имя/к, цена-->
-                        <div id="name-bought">
-                            <!--имя,куп-->
-                            <div class="name">
-                                рекламный дережабль
-                            </div>
-                            <div class=" bought">
-                                куплено: <span id="zeppelins">0</span>  
-                            </div>
-                        </div>
-                        <div class="cost"
-                        onclick="buyZeppelin()">
-                            ЦЕНА: <span id="zeppelinCost">727400000000
-                                </span>
-                        </div>
-                    </div>
-                </div>
-                <div id="gnomo" class="gnome">
-                    <div id="neuro" class="up-pick">
-                    </div>
-                    <div id="name-cost">
-                        <!--имя/к, цена-->
-                        <div id="name-bought">
-                            <!--имя,куп-->
-                            <div class="name">
-                                био компьютер
-                            </div>
-                            <div class=" bought">
-                                куплено: <span id="neuros">0
-                                </span>
-                            </div>
-                        </div>
-                        <div class="cost"
-                        onclick="buyNeuro()">
-                            ЦЕНА: <span id="neuroCost">6546000000000</span>
-                        </div>
-                    </div>
-                </div>
-                <div id="gnomo" class="gnome">
-                    <div id="SPACEHYPNOLASER" class="up-pick">
-                    </div>
-                    <div id="name-cost">
-                        <!--имя/к, цена-->
-                        <div id="name-bought">
-                            <!--имя,куп-->
-                            <div class="name"> КОСМИЧЕСКИЙ ГИПНОЛАЗЕР ДЕПРЕССИИ
-                            </div>
-                            <div class=" bought">
-                                куплено:<span id="SPACEHYPNOLASERs">0</span> 
-                            </div>
-                        </div>
-                        <div class="cost"
-                        onclick="buySPACEHYPNOLASER()">
-                            ЦЕНА: <span id="SPACEHYPNOLASERCost">99999999999999</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            </div>
-            <div class="youNeedThis" id="needThis">
-            <div class="saveNload" id="savlod">
-            <div onclick="saveGame(); alert('игра сохранена!')" class="save">Сохранить прогресс</div>
-            <div onclick="gameReset();" class="reset">Сбросить прогресс</div>
-            </div>
-                <div class="infoo" onclick="showSpravka()">
-                </div>
-            <div class="info" id="inf">
-            <div class="optimized">
-                <p>оптимизировано</p>
-                <p>для смартфонов :></p>
-            </div>
-            <div class="gameVersion">версия игры: 2.43</div>
-            </div>
-            </div>
-        </div> 
-        <div id="allcov" class="allcover" onclick="hideSpravka()"></div>
-        <div id="sprav" class="spravka" onclick="hideSpravka()">
-            <!--подумать, всё-ли записал-->
-            <h2>Справка</h2>
-            <p></p>
-            <h1 id="wellcum">Добро пожаловать в Depresso Clicker!</h1>
-            <h2>Здесь вы будете зарабатывать деньги на депрессивных людях</h2>
-            <p> </p>
-            <h3>Ваши обязанности:</h3>
-            <ul>
-                <li>Кликать грустную Кошку-картошку™!</li>
-                <li>Развивать свою компанию!</li>
-                <li>Делать свою жизнь лучше!</li>
-                <li>Делать жизнь других хуже!</li>
-            </ul>
-            <p>- Улучшения делятся на 4 этапа, для перехода на следующий, необходимо купить по 10 едениц улучшений предыдущего этапа</p>
-            <p>- Чтобы увидеть описание улучшения, потрогайте картинку этого улучшения(ПОКА ЕЩЁ НЕ СДЕЛАЛ)</p>
-            <p></p>
-            <p></p>
-            <p>- Чтобы увидеть справку снова, потрогайте кнопку справки внизу экрана</p>
-            <p></p>
-            <p></p>
-            <p>- Чтобы закрыть это окно, нажмите в любом месте на экране (кроме кнопки закрытия, пожалуйста, не надо)</p>
-        </div>
-    </body>
+		<link rel="stylesheet" href="style.css" />
+		<script src="mainscript.js"></script>
+	</head>
+	<body>
+		<div class="coom">
+			<header>
+				<div id="inhead">
+					<div id="nofunny" class="inheader"></div>
+					<div id="funny" class="inheader"></div>
+					<div id="iheader" class="inheader">
+						<div class="contact">каша</div>
+						<div id="inheader" class="contact">пура</div>
+						<a
+							id="kasha"
+							class="contact2"
+							href="https://vk.com/bruh__momentum"
+						>
+						</a>
+						<a
+							id="pura"
+							class="contact2"
+							href="https://vk.com/yappppp"
+						>
+						</a>
+					</div>
+				</div>
+			</header>
+			<div id="bruh">
+				<div class="shit">
+					<div class="textpain">Заработок с угробленных жизней:</div>
+					<div class="pain">
+						<span id="monni">0</span>
+					</div>
+					<div class="painPS"><span id="moniPS">0</span>/сек</div>
+					<div
+						id="tbltk"
+						class="tabletka"
+						onclick="addMoni(clickWeight)"
+					></div>
+					<div class="anime"></div>
+				</div>
+				<div id="sussy-baka" class="piss">
+					<div class="baka1" onclick="baka1toggle();">
+						I
+						<div id="cover1" class="bakacover"></div>
+					</div>
+					<div class="baka2" onclick="baka2toggle();">
+						II
+						<div id="cover2" class="bakacover"></div>
+					</div>
+					<div class="baka3" onclick="baka3toggle();">
+						III
+						<div id="cover3" class="bakacover"></div>
+					</div>
+					<div class="baka4" onclick="baka4toggle();">
+						IV
+						<div id="cover4" class="bakacover"></div>
+					</div>
+				</div>
+				<div id="cum1" class="cumm1">
+					<div id="yhoho" class="cum">
+						<div id="gnomo" class="gnome">
+							<div id="clickWeighter" class="up-pick">
+								<!--подумать про onClick-->
+								<!--ОЧЕНЬ ХОРОШО ПОДУМАТЬ-->
+							</div>
+							<div id="name-cost">
+								<!--имя/к, цена-->
+								<div id="name-bought">
+									<!--имя,куп-->
+									<div class="name">усиление клика</div>
+									<div class="bought">
+										куплено:<span id="clickWeights">0</span>
+									</div>
+								</div>
+								<div class="cost" onclick="buyClickWeight()">
+									ЦЕНА: <span id="clickWeightCost">10</span>
+								</div>
+							</div>
+						</div>
+						<div id="gnomo" class="gnome">
+							<div id="worker" class="up-pick"></div>
+							<div id="name-cost">
+								<!--имя/к, цена-->
+								<div id="name-bought">
+									<!--имя,куп-->
+									<div class="name">рабочий</div>
+									<div class="bought">
+										куплено:<span id="workers">0</span>
+									</div>
+								</div>
+								<div class="cost" onclick="buyWorker()">
+									ЦЕНА: <span id="workerCost">10</span>
+								</div>
+							</div>
+						</div>
+						<div id="gnomo" class="gnome">
+							<div id="newsAds" class="up-pick"></div>
+							<div id="name-cost">
+								<!--имя/к, цена-->
+								<div id="name-bought">
+									<!--имя,куп-->
+									<div class="name">реклама в новостях</div>
+									<div class="bought">
+										куплено: <span id="newss">0</span>
+									</div>
+								</div>
+								<div class="cost" onclick="buyNews()">
+									ЦЕНА: <span id="newsCost">35 </span>
+								</div>
+							</div>
+						</div>
+						<div id="gnomo" class="gnome">
+							<div id="student" class="up-pick"></div>
+							<div id="name-cost">
+								<!--имя/к, цена-->
+								<div id="name-bought">
+									<!--имя,куп-->
+									<div class="name">
+										студент исследователь
+									</div>
+									<div class="bought">
+										куплено: <span id="students">0 </span>
+									</div>
+								</div>
+								<div class="cost" onclick="buyStudent()">
+									ЦЕНА: <span id="studentCost">222</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="cum2" class="cumm2">
+					<div id="yhoho" class="cum">
+						<div id="gnomo" class="gnome">
+							<div id="migrant" class="up-pick"></div>
+							<div id="name-cost">
+								<!--имя/к, цена-->
+								<div id="name-bought">
+									<!--имя,куп-->
+									<div class="name">рабочий мигрант</div>
+									<div class="bought">
+										куплено:<span id="migrants">0</span>
+									</div>
+								</div>
+								<div class="cost" onclick="buyMigrant()">
+									ЦЕНА: <span id="migrantCost">1250</span>
+								</div>
+							</div>
+						</div>
+						<div id="gnomo" class="gnome">
+							<div id="television" class="up-pick"></div>
+							<div id="name-cost">
+								<!--имя/к, цена-->
+								<div id="name-bought">
+									<!--имя,куп-->
+									<div class="name">реклама нв ТВ</div>
+									<div class="bought">
+										куплено: <span id="tvs">0</span>
+									</div>
+								</div>
+								<div class="cost" onclick="buyTv()">
+									ЦЕНА: <span id="tvCost">12500 </span>
+								</div>
+							</div>
+						</div>
+						<div id="gnomo" class="gnome">
+							<div id="sciense" class="up-pick"></div>
+							<div id="name-cost">
+								<!--имя/к, цена-->
+								<div id="name-bought">
+									<!--имя,куп-->
+									<div class="name">недоплаченный ученый</div>
+									<div class="bought">
+										куплено: <span id="scienses">0 </span>
+									</div>
+								</div>
+								<div class="cost" onclick="buySciense()">
+									ЦЕНА: <span id="scienseCost">75000</span>
+								</div>
+							</div>
+						</div>
+						<div id="gnomo" class="gnome">
+							<div id="overseer" class="up-pick"></div>
+							<div id="name-cost">
+								<!--имя/к, цена-->
+								<div id="name-bought">
+									<!--имя,куп-->
+									<div class="name">надзиратель</div>
+									<div class="bought">
+										куплено:<span id="overseers">0</span>
+									</div>
+								</div>
+								<div class="cost" onclick="buyOverseer()">
+									ЦЕНА: <span id="overseerCost">404000</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="cum3" class="cumm2">
+					<div id="yhoho" class="cum">
+						<div id="gnomo" class="gnome">
+							<div id="child" class="up-pick"></div>
+							<div id="name-cost">
+								<!--имя/к, цена-->
+								<div id="name-bought">
+									<!--имя,куп-->
+									<div class="name">детский труд</div>
+									<div class="bought">
+										куплено:<span id="childs">0</span>
+									</div>
+								</div>
+								<div class="cost" onclick="buyChild()">
+									ЦЕНА: <span id="childCost">26000000</span>
+								</div>
+							</div>
+						</div>
+						<div id="gnomo" class="gnome">
+							<div id="spam" class="up-pick"></div>
+							<div id="name-cost">
+								<!--имя/к, цена-->
+								<div id="name-bought">
+									<!--имя,куп-->
+									<div class="name">спам реклама</div>
+									<div class="bought">
+										куплено: <span id="spams">0</span>
+									</div>
+								</div>
+								<div class="cost" onclick="buySpam()">
+									ЦЕНА: <span id="spamCost">183000000 </span>
+								</div>
+							</div>
+						</div>
+						<div id="gnomo" class="gnome">
+							<div id="researcher" class="up-pick"></div>
+							<div id="name-cost">
+								<!--имя/к, цена-->
+								<div id="name-bought">
+									<!--имя,куп-->
+									<div class="name">
+										исследователь высшего класса
+									</div>
+									<div class="bought">
+										куплено:
+										<span id="researchers">0 </span>
+									</div>
+								</div>
+								<div class="cost" onclick="buyResearcher()">
+									ЦЕНА:
+									<span id="researcherCost">1299000000</span>
+								</div>
+							</div>
+						</div>
+						<div id="gnomo" class="gnome">
+							<div id="test" class="up-pick"></div>
+							<div id="name-cost">
+								<!--имя/к, цена-->
+								<div id="name-bought">
+									<!--имя,куп-->
+									<div class="name">
+										тест препаратов на рабочих
+									</div>
+									<div class="bought">
+										куплено:<span id="tests">0</span>
+									</div>
+								</div>
+								<div class="cost" onclick="buyTest()">
+									ЦЕНА: <span id="testCost">10392000000</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="cum4" class="cumm2">
+					<div id="yhoho" class="cum">
+						<div id="gnomo" class="gnome">
+							<div id="robo" class="up-pick"></div>
+							<div id="name-cost">
+								<!--имя/к, цена-->
+								<div id="name-bought">
+									<!--имя,куп-->
+									<div class="name">
+										замена рабочего роботом
+									</div>
+									<div class="bought">
+										куплено:<span id="robos">0</span>
+									</div>
+								</div>
+								<div class="cost" onclick="buyRobo()">
+									ЦЕНА:
+									<span id="roboCost">103920000000</span>
+								</div>
+							</div>
+						</div>
+						<div id="gnomo" class="gnome">
+							<div id="zeppelin" class="up-pick"></div>
+							<div id="name-cost">
+								<!--имя/к, цена-->
+								<div id="name-bought">
+									<!--имя,куп-->
+									<div class="name">рекламный дережабль</div>
+									<div class="bought">
+										куплено: <span id="zeppelins">0</span>
+									</div>
+								</div>
+								<div class="cost" onclick="buyZeppelin()">
+									ЦЕНА:
+									<span id="zeppelinCost">727400000000 </span>
+								</div>
+							</div>
+						</div>
+						<div id="gnomo" class="gnome">
+							<div id="neuro" class="up-pick"></div>
+							<div id="name-cost">
+								<!--имя/к, цена-->
+								<div id="name-bought">
+									<!--имя,куп-->
+									<div class="name">био компьютер</div>
+									<div class="bought">
+										куплено: <span id="neuros">0 </span>
+									</div>
+								</div>
+								<div class="cost" onclick="buyNeuro()">
+									ЦЕНА:
+									<span id="neuroCost">6546000000000</span>
+								</div>
+							</div>
+						</div>
+						<div id="gnomo" class="gnome">
+							<div id="SPACEHYPNOLASER" class="up-pick"></div>
+							<div id="name-cost">
+								<!--имя/к, цена-->
+								<div id="name-bought">
+									<!--имя,куп-->
+									<div class="name">
+										КОСМИЧЕСКИЙ ГИПНОЛАЗЕР ДЕПРЕССИИ
+									</div>
+									<div class="bought">
+										куплено:<span id="SPACEHYPNOLASERs"
+											>0</span
+										>
+									</div>
+								</div>
+								<div
+									class="cost"
+									onclick="buySPACEHYPNOLASER()"
+								>
+									ЦЕНА:
+									<span id="SPACEHYPNOLASERCost"
+										>99999999999999</span
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="youNeedThis" id="needThis">
+				<div class="saveNload" id="savlod">
+					<div
+						onclick="saveGame(); alert('игра сохранена!')"
+						class="save"
+					>
+						Сохранить прогресс
+					</div>
+					<div onclick="gameReset();" class="reset">
+						Сбросить прогресс
+					</div>
+				</div>
+				<div class="infoo" onclick="showSpravka()"></div>
+				<div class="info" id="inf">
+					<div class="optimized">
+						<p>оптимизировано</p>
+						<p>для смартфонов :></p>
+					</div>
+					<div class="gameVersion">версия игры: 2.43</div>
+				</div>
+			</div>
+		</div>
+		<div id="allcov" class="allcover" onclick="hideSpravka()"></div>
+		<div id="sprav" class="spravka" onclick="hideSpravka()">
+			<!--подумать, всё-ли записал-->
+			<h2>Справка</h2>
+			<p></p>
+			<h1 id="wellcum">Добро пожаловать в Depresso Clicker!</h1>
+			<h2>Здесь вы будете зарабатывать деньги на депрессивных людях</h2>
+			<p></p>
+			<h3>Ваши обязанности:</h3>
+			<ul>
+				<li>Кликать грустную Кошку-картошку™!</li>
+				<li>Развивать свою компанию!</li>
+				<li>Делать свою жизнь лучше!</li>
+				<li>Делать жизнь других хуже!</li>
+			</ul>
+			<p>
+				- Улучшения делятся на 4 этапа, для перехода на следующий,
+				необходимо купить по 10 едениц улучшений предыдущего этапа
+			</p>
+			<p>
+				- Чтобы увидеть описание улучшения, потрогайте картинку этого
+				улучшения(ПОКА ЕЩЁ НЕ СДЕЛАЛ)
+			</p>
+			<p></p>
+			<p></p>
+			<p>
+				- Чтобы увидеть справку снова, потрогайте кнопку справки внизу
+				экрана
+			</p>
+			<p></p>
+			<p></p>
+			<p>
+				- Чтобы закрыть это окно, нажмите в любом месте на экране (кроме
+				кнопки закрытия, пожалуйста, не надо)
+			</p>
+		</div>
+	</body>
 </html>
