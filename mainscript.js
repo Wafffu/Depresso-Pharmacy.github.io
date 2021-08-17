@@ -1,3 +1,50 @@
+function baka1toggle() {
+	hideAll();
+	document.getElementById("cum1").classList.remove("noshow");
+	document.getElementById("cum1").classList.add("yeshow");
+	document.getElementById("cover1").classList.remove("noshow");
+	document.getElementById("cover1").classList.add("yeshow");
+}
+function baka2toggle() {
+	if (clickWeights >= 10 && workers >= 10 && newss >= 10 && students >= 10) {
+		hideAll();
+		document.getElementById("cum2").classList.remove("noshow");
+		document.getElementById("cum2").classList.add("yeshow");
+		document.getElementById("cover2").classList.remove("noshow");
+		document.getElementById("cover2").classList.add("yeshow");
+	} else {
+		alert(
+			"купите по 10 едениц каждого улучшения для перехода на новую ступень"
+		);
+	}
+}
+function baka3toggle() {
+	if (migrants >= 10 && tvs >= 10 && scienses >= 10 && overseers >= 10) {
+		hideAll();
+		document.getElementById("cum3").classList.remove("noshow");
+		document.getElementById("cum3").classList.add("yeshow");
+		document.getElementById("cover3").classList.remove("noshow");
+		document.getElementById("cover3").classList.add("yeshow");
+	} else {
+		alert(
+			"купите по 10 едениц каждого улучшения для перехода на новую ступень"
+		);
+	}
+}
+function baka4toggle() {
+	if (childs >= 10 && spams >= 10 && researchers >= 10 && tests >= 10) {
+		hideAll();
+		document.getElementById("cum4").classList.remove("noshow");
+		document.getElementById("cum4").classList.add("yeshow");
+		document.getElementById("cover4").classList.remove("noshow");
+		document.getElementById("cover4").classList.add("yeshow");
+	} else {
+		alert(
+			"купите по 10 едениц каждого улучшения для перехода на новую ступень"
+		);
+	}
+}
+
 function hideAll() {
 	document.getElementById("cum1").classList.remove("yeshow");
 	document.getElementById("cum1").classList.add("noshow");
@@ -12,35 +59,6 @@ function hideAll() {
 	document.getElementById("cover2").classList.add("noshow");
 	document.getElementById("cover3").classList.add("noshow");
 	document.getElementById("cover4").classList.add("noshow");
-}
-
-function baka1toggle() {
-	hideAll();
-	document.getElementById("cum1").classList.remove("noshow");
-	document.getElementById("cum1").classList.add("yeshow");
-	document.getElementById("cover1").classList.remove("noshow");
-	document.getElementById("cover1").classList.add("yeshow");
-}
-function baka2toggle() {
-	hideAll();
-	document.getElementById("cum2").classList.remove("noshow");
-	document.getElementById("cum2").classList.add("yeshow");
-	document.getElementById("cover2").classList.remove("noshow");
-	document.getElementById("cover2").classList.add("yeshow");
-}
-function baka3toggle() {
-	hideAll();
-	document.getElementById("cum3").classList.remove("noshow");
-	document.getElementById("cum3").classList.add("yeshow");
-	document.getElementById("cover3").classList.remove("noshow");
-	document.getElementById("cover3").classList.add("yeshow");
-}
-function baka4toggle() {
-	hideAll();
-	document.getElementById("cum4").classList.remove("noshow");
-	document.getElementById("cum4").classList.add("yeshow");
-	document.getElementById("cover4").classList.remove("noshow");
-	document.getElementById("cover4").classList.add("yeshow");
 }
 
 //ОБЪЯВЛЯТЬ ЗДЕСЬ УЛУЧШЕНИЯ
@@ -84,7 +102,18 @@ let newValue = 69;
 
 function addMoni() {
 	moni += clickWeight;
+	squishTheCat();
 	document.getElementById("monni").innerHTML = abbreviateNumber(moni);
+}
+function squishTheCat() {
+	document.getElementById("tbltk").classList.remove("unsqsh");
+	document.getElementById("tbltk").classList.add("sqsh");
+	setTimeout(unSquisTheCat, 200);
+}
+
+function unSquisTheCat() {
+	document.getElementById("tbltk").classList.remove("sqsh");
+	document.getElementById("tbltk").classList.add("unsqsh");
 }
 
 function buyClickWeight() {
@@ -318,6 +347,7 @@ function saveGame() {
 		neuros: neuros,
 		SPACEHYPNOLASERCost: SPACEHYPNOLASERCost,
 		SPACEHYPNOLASERs: SPACEHYPNOLASERs,
+		s: s,
 	};
 	localStorage.setItem("gameSave", JSON.stringify(gameSave));
 }
@@ -385,11 +415,18 @@ function loadGame() {
 		SPACEHYPNOLASERCost = savedGame.SPACEHYPNOLASERCost;
 	if (typeof savedGame.SPACEHYPNOLASERs !== "undefined")
 		SPACEHYPNOLASERs = savedGame.SPACEHYPNOLASERs;
+	if (typeof savedGame.s !== "undefined") s = savedGame.s;
 }
 
+let s = 0;
 //ДОБАВЛЯТЬ УЛУЧШЕНИЯ СЮДА
 window.onload = function () {
 	loadGame();
+	if (s == 0) {
+		s++;
+		showSpravka();
+	}
+	saveGame();
 	document.getElementById("clickWeightCost").innerHTML =
 		abbreviateNumber(clickWeightCost);
 	document.getElementById("clickWeights").innerHTML = clickWeights;
@@ -448,21 +485,35 @@ function gameReset() {
 	}
 }
 
+function showSpravka() {
+	document.getElementById("allcov").classList.remove("noshow");
+	document.getElementById("allcov").classList.add("yeshow");
+	document.getElementById("sprav").classList.remove("noshow");
+	document.getElementById("sprav").classList.add("yeshow");
+}
+
+function hideSpravka() {
+	document.getElementById("allcov").classList.remove("yeshow");
+	document.getElementById("allcov").classList.add("noshow");
+	document.getElementById("sprav").classList.remove("yeshow");
+	document.getElementById("sprav").classList.add("noshow");
+}
+
 /*function abbreviateNumber(value) {
-    let newValue = value;
-    if (value >= 1000) {
-        let suffixes = ["", "k", "m", "b","t"];
-        let suffixNum = Math.floor( (""+value).length/5 );
-        let shortValue = '';
-        for (let precision = 3; precision >= 1; precision--) {
-            shortValue = parseFloat( (suffixNum != 0 ? (value / Math.pow(1000,suffixNum) ) : value).toPrecision(precision));
-            let dotLessShortValue = (shortValue + '').replace(/[^a-zA-Z 0-9]+/g,'');
-            if (dotLessShortValue.length <= 2) { break; }
-        }
-        if (shortValue % 1 != 0)  shortNum = shortValue.toFixed(1);
-        newValue = shortValue+suffixes[suffixNum];
-    }
-    return newValue;
+let newValue = value;
+if (value >= 1000) {
+let suffixes = ["", "k", "m", "b","t"];
+let suffixNum = Math.floor( (""+value).length/5 );
+let shortValue = '';
+for (let precision = 3; precision >= 1; precision--) {
+	shortValue = parseFloat( (suffixNum != 0 ? (value / Math.pow(1000,suffixNum) ) : value).toPrecision(precision));
+	let dotLessShortValue = (shortValue + '').replace(/[^a-zA-Z 0-9]+/g,'');
+	if (dotLessShortValue.length <= 2) { break; }
+}
+if (shortValue % 1 != 0)  shortNum = shortValue.toFixed(1);
+newValue = shortValue+suffixes[suffixNum];
+}
+return newValue;
 }*/
 
 let i = 0;
@@ -471,14 +522,14 @@ function abbreviateNumber(value) {
 	let newValue = value;
 	if (newValue < 1000) {
 		newValue = Math.floor(newValue * 100) / 100;
-		dick = newValue + suffixes[i];
+		duck = newValue + suffixes[i];
 		i = 0;
 	} else {
 		newValue /= 1000;
 		i++;
 		abbreviateNumber(newValue);
 	}
-	return dick;
+	return duck;
 }
 
 setInterval(function () {
@@ -487,7 +538,23 @@ setInterval(function () {
 
 //ДОБАВЛЯТЬ УЛУЧШЕНТЯ СЮДА
 setInterval(function () {
-	moni += moniPS / 10;
+	moni +=
+		(workers +
+			newss * 5 +
+			students * 10 +
+			migrants * 33 +
+			tvs * 123 +
+			scienses * 1000 +
+			overseers * 9000 +
+			childs * 25000 +
+			spams * 69000 +
+			researchers * 1240000 +
+			tests * 75000000 +
+			robos * 690000000 +
+			zeppelins * 2200000000 +
+			neuros * 13500000000 +
+			SPACEHYPNOLASERs * 999999999999) /
+		10;
 	document.getElementById("monni").innerHTML = abbreviateNumber(moni);
 }, 100);
 
@@ -510,4 +577,4 @@ setInterval(function moniPerSecond() {
 		neuros * 13500000000 +
 		SPACEHYPNOLASERs * 999999999999;
 	document.getElementById("moniPS").innerHTML = abbreviateNumber(moniPS);
-}, 1000);
+}, 100);

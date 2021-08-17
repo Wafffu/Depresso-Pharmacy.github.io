@@ -10,7 +10,7 @@ body {
 }
 header {
 	height: 200px;
-	background-color: blue;
+	background-color: #343f3e;
 	background-image: url(https://static.themoscowtimes.com/image/article_1360/ad/TASS31128345.jpg);
 	background-size: cover;
 	background-position: 50% 25%;
@@ -20,6 +20,31 @@ header {
 	background-color: pink;
 	margin: 0;
 	background-image: url(https://sher.media/wp-content/uploads/2020/10/2795340439_bacf3599c7_o.jpg);
+}
+.allcover {
+	height: 100%;
+	width: 100%;
+	background-color: rgb(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}
+#wellcum {
+	line-height: 45px;
+}
+.spravka {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 600px;
+	height: 900px;
+	padding: 10px;
+	color: white;
+	line-height: 28px;
+	background-color: #343f3e;
+	transform: translate(-50%, -10%);
+	display: none;
 }
 #inhead {
 	display: flex;
@@ -67,11 +92,13 @@ header {
 	background-size: cover;
 	border-radius: 15px;
 }
+/*заменить потом на кликер пуры*/
 #pura {
 	background-image: url(https://i.imgur.com/aa5gPNs_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
 	background-size: cover;
 	border-radius: 15px;
 }
+/*ауф*/
 #bruh {
 	display: flex;
 	flex-direction: column;
@@ -83,9 +110,10 @@ header {
 	margin-right: auto;
 }
 .shit {
+	overflow: hidden;
 	height: 600px;
 	margin: 1% 2%;
-	background-color: red;
+	background-color: #343f3e;
 	background-image: url(https://i.imgur.com/JJNqDml_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
 	background-size: cover;
 	background-position: bottom;
@@ -126,18 +154,52 @@ header {
 	line-height: 22px;
 	text-align: center;
 }
+/*подумать над пикчейи размером, добаыить котику анимацию и возможно какойнибудть эффект на задний план*/
+@keyframes rotate {
+	from {
+		transform: rotate(-15deg) translate(-50%, -50%);
+	}
+	to {
+		transform: rotate(15deg) translate(-50%, -50%);
+	}
+}
 .tabletka {
+	animation-duration: 3s;
+	animation-name: rotate;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	transform-origin: top left;
+	animation-timing-function: ease-in-out;
 	height: 30%;
 	width: 30%;
 	position: relative;
 	top: 20%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	background-color: transparent;
+	border: none;
 	background-image: url(https://i.imgur.com/8ariOk6_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
 	touch-action: manipulation;
+}
+.anime {
+	height: 100px;
+	width: 100px;
+	background-color: white;
+	animation-duration: 5s;
+	animation-name: movenime;
+	animation-timing-function: linear;
+	display: none;
+}
+@keyframes movenime {
+	from {
+		transform: translate(-10000%, 150%);
+	}
+	to {
+		transform: translate(10000%, 150%);
+	}
 }
 .piss {
 	height: 100px;
@@ -145,11 +207,12 @@ header {
 	background-color: #94b0da;
 	border-radius: 7px;
 }
+/*uwu*/
 #sussy-baka {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-}
+} /*изменишь размер баки и крышка полетит в пизду*/
 .bakacover {
 	height: 100%;
 	width: 100%;
@@ -226,6 +289,7 @@ header {
 	align-items: stretch;
 	justify-content: flex-start;
 }
+/*you've been GNOMED*/
 .gnome {
 	height: 150px;
 	margin: 1% 2%;
@@ -233,7 +297,7 @@ header {
 #gnomo {
 	display: flex;
 	align-items: center;
-}
+} /*ВЫПАДАЮЩЕЕ ОПИСАНИЕ ПО КЛИКУ ДОБАВЬ УЖЕ*/
 .up-pick {
 	height: 128px;
 	width: 128px;
@@ -242,6 +306,7 @@ header {
 	border-radius: 20px;
 	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
 }
+/*с улучшениями вроде бы закончил*/
 #clickWeighter {
 	background-image: url(https://i.imgur.com/56Qov9g_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
 	background-repeat: no-repeat;
@@ -416,6 +481,16 @@ header {
 	flex-direction: column;
 	justify-content: space-around;
 }
+.infoo {
+	height: 80px;
+	width: 80px;
+	border-radius: 40px;
+	background-position: center;
+	background-repeat: no-repeat;
+	touch-action: manipulation;
+	background-size: contain;
+	background-image: url(https://i.imgur.com/A207VkH_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+}
 .optimized {
 	height: 60px;
 	width: 269px;
@@ -451,4 +526,13 @@ header {
 }
 .noshow {
 	display: none;
+}
+
+.sqsh {
+	height: 28%;
+	width: 28%;
+}
+.unsqsh {
+	height: 30%;
+	width: 30%;
 }
