@@ -20,6 +20,13 @@ rel='stylesheet' type='text/css'>-->
         <style>
 /*шрифт*/
             @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+            
+
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+}
             html {
                 padding: 0;
                 margin: 0;
@@ -558,6 +565,7 @@ rel='stylesheet' type='text/css'>-->
             #needThis{
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
             }
             /*сохранить/загрузить*/
             #savlod{
@@ -603,26 +611,27 @@ rel='stylesheet' type='text/css'>-->
                 
             }
             .optimized{
-                height: 60px;
+                margin: 5px;
+                padding: 5px
                 width: 269px;
                 color: white;
                 background-color: #343F3E;
                 font-size: 15px;
-                line-height: 8px;
+                line-height: 18px;
                 text-align: center;
                 border-radius: 5px;
                 margin: 5px;
             }
              
             .gameVersion{
-                height: 30px;
                 width: 269px;
                 color: white;
                 background-color: #343F3E;
-                line-height: 30px;
+                line-height: 18px;
                 text-align: center;
                 border-radius: 5px;
                 margin: 5px;
+                padding: 5px;
             }
 /*нижняя штука всё*/
 
@@ -2200,7 +2209,6 @@ rel='stylesheet' type='text/css'>-->
 /*ШТУКА, КОТОРАЯ ИСПРАВИЛА КОШКУ КАРТОШКУ*/
 let sas = document.getElementById('tbltk');
 sas.addEventListener('mousedown', addMoni, false);
-
 //я пытался сделать это циклом.. честно
 let sos1=document.getElementById('btncst1');
 let sos2=document.getElementById('btncst2');
