@@ -1,19 +1,31 @@
 
 /*шрифт*/
             @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+            
+
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+}
             html {
+                padding: 0;
+                margin: 0;
                 font-family: 'Press Start 2P', cursive;
                 font-size: 15px;
                 font-weight: bold;
-                background-color: #343F3E
+                background-color: #8F91A2
 };
 /*самое маленькое свойство в этом коде*/
             body{
             margin: 0;
+            padding: 0;
             }
             
 /*шапка*/
             header{
+            padding: 0;
+                margin: 0;
                 height: 200px;
                 background-color: #343F3E;
                 background-image: url(https://static.themoscowtimes.com/image/article_1360/ad/TASS31128345.jpg);
@@ -21,12 +33,38 @@
                 background-position: 50% 25%;
                 margin: 0;
             }
-            .coom{
-                background-color: pink;
+            h1{
+            margin: 5px;
+            padding: 5px;
+            }
+            h2{
+            margin: 5px;
+            padding: 5px;
+            }
+            h3{
+            margin: 5px;
+            padding: 5px;
+            }
+            li{
+            margin: 5px;
+            padding: 5px;
+            }
+            p{
+            margin: 5px;
+            }
+/*я пытался избавиться от отступа*/
+            .everything{
                 margin: 0;
+                padding: 0;
+            }
+            .coom{
+                margin: 0;
+                background-color: pink;
                 background-image: url(https://sher.media/wp-content/uploads/2020/10/2795340439_bacf3599c7_o.jpg);
             }
             .allcover{
+                margin: 0;
+                z-index: 8;
                 height: 100%;
                 width: 100%;
                 background-color: rgb(0, 0, 0,.5);
@@ -36,25 +74,6 @@
                 display: none;
             }
             
-/*не шапка*/
-            #wellcum{
-                line-height: 45px;
-            }
-            .spravka{
-                position: absolute;
-                top: 300px;
-                left: 50%;
-                width: 600px;
-                height: 900px;
-                padding: 10px;
-                color: white;
-                line-height: 28px;
-                background-color: #343F3E;
-                transform: translate(-50%, -10%);
-                display: none;
-            }
-/*опять справка*/
-/*я мог бы это исправить, но мне лень*/
             #inhead{
                 display: flex;
                 justify-content: space-between;
@@ -228,6 +247,7 @@
             }
 /*микрочелики*/
             .anime{
+                margin: 0;
                 height: 100px;
                 width: 100px;
                 background-color: white;
@@ -344,6 +364,7 @@
                 margin: 1% 2%;
                 background-color: #8F91A2;
                 border-radius: 7px;
+                padding-bottom: 5%;
             }
             #yhoho{
                 display: flex;
@@ -361,6 +382,7 @@
                 align-items: center;
             }/*ВЫПАДАЮЩЕЕ ОПИСАНИЕ ПО КЛИКУ ДОБАВЬ УЖЕ*/
             .up-pick{
+                z-index: 3;
                 height: 128px;
                 width: 128px;
                 background-color: #343F3E;
@@ -368,6 +390,20 @@
                 border-radius: 20px;
                 box-shadow: 5px 5px 10px rgba(0,0,0,.7);
             }
+            
+            .upgradeInfo{
+                width: 90%;
+                margin-left: 5%;
+                padding: 1%;
+                color: white;
+                background-color: #343F3E;
+                display: none;
+                margin-top: 0;
+                border-radius: 0px 0px 10px 10px;
+                line-height: 135%;
+                transform: translate(0,-25px);
+            }
+            
             /*с улучшениями вроде бы закончил*/
 /*пикчи улучшений*/
             #clickWeighter{
@@ -485,6 +521,10 @@
                 height: 20%;
             }
             .name{
+                z-index: 1;
+                padding-left: 15px;
+                transform: translate(-10px, 0);
+                padding-right: 5px;
                 background-color: #505A5B;
                 color: white;
                 line-height: 25px;
@@ -499,6 +539,9 @@
                 box-shadow: 5px 5px 10px rgba(0,0,0,.7);
             }
             .cost{
+                z-index: 2;
+                width: 101%;
+                transform: translate(-10px,0);
                 height: 90px;
                 background-color: #505A5B;
                 opacity: 0.8;
@@ -513,6 +556,7 @@
 
 /*штука внизу*/
             .youNeedThis{
+                margin: 0;
                 height: 100px;
                 background-color: rgb(148, 176, 218,.8);
                 padding: 20px;
@@ -521,6 +565,7 @@
             #needThis{
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
             }
             /*сохранить/загрузить*/
             #savlod{
@@ -566,29 +611,86 @@
                 
             }
             .optimized{
-                height: 60px;
+                margin: 5px;
+                padding: 5px
                 width: 269px;
                 color: white;
                 background-color: #343F3E;
                 font-size: 15px;
-                line-height: 8px;
+                line-height: 18px;
                 text-align: center;
                 border-radius: 5px;
                 margin: 5px;
             }
              
             .gameVersion{
-                height: 30px;
                 width: 269px;
                 color: white;
                 background-color: #343F3E;
-                line-height: 30px;
+                line-height: 18px;
                 text-align: center;
                 border-radius: 5px;
                 margin: 5px;
+                padding: 5px;
             }
 /*нижняя штука всё*/
 
+            #wellcum{
+                line-height: 45px;
+            }
+            .spravka{
+                margin: 0;
+                z-index: 9;
+                position: absolute;
+                top: 300px;
+                left: 50%;
+                width: 600px;
+                height: 900px;
+                padding: 15px;
+                color: white;
+                line-height: 28px;
+                background-color: #343F3E;
+                transform: translate(-50%, -10%);
+                display: none;
+                animation: down 0.2s linear;
+            }
+            
+            .buyalert{
+                z-index: 8;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                height: 250px;
+                width: 400px;
+                padding:10px;
+                color: white;
+                background-color: #343F3E;
+                transform: translate(-50%, -10%);
+                animation: down 0.2s linear;
+                display: none;
+                text-align: start;
+                font-size: 20px;
+                line-height: 40px;
+                border-radius: 15px;
+            }
+            
+            .saveAlert{
+                height: 80px;
+                width: 300px;
+                z-index: 6;
+                position: fixed;
+                top: 100%;
+                left: 50%;
+                padding: 10px;
+                color: white;
+                background-color: #343F3E;
+                border-radius: 10px 10px 0 0;
+                text-align: center;
+                font-size: 20px;
+                line-height: 30px;
+                animation: up 5s;
+                display: none;
+            }
             /*штуки для изменения вижжжажмжжмжммжсти*/
             .cumm2{
                 display: none;
@@ -613,4 +715,31 @@
             .unsqsh{
                 height: 30%;
                 width: 30%;
+            }
+            @keyframes up{
+            from{
+            transform: translate(-50%,0);
+            }
+            25%{
+            transform: translate(-50%,-100%);
+            }
+            75%{
+            transform: translate(-50%,-100%);
+            }
+            to{
+            transform: translate(-50%,0);
+            }
+            }
+            .slide{
+                animation: down 1s linear;
+            }
+            @keyframes down{
+            from{
+                opacity: 0;
+                transform: translate(-50%,-12%);
+            }
+            to{
+                opacity: 1;
+                transform: translate(-50%,-10%);
+            }
             }
