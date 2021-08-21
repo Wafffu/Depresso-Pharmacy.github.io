@@ -1,5 +1,4 @@
 
-
 //стадии
         function baka1toggle(){
             hideAll();
@@ -16,7 +15,7 @@
             document.getElementById("cover2").classList.remove("noshow");
             document.getElementById("cover2").classList.add("yeshow");
             }else{
-                alert('купите по 10 едениц каждого улучшения для перехода на новую ступень')
+            showAlert();
             }
         }
         function baka3toggle(){
@@ -27,7 +26,7 @@
             document.getElementById("cover3").classList.remove("noshow");
             document.getElementById("cover3").classList.add("yeshow");
             }else{
-            alert('купите по 10 едениц каждого улучшения для перехода на новую ступень')
+            showAlert();
             }
         }
         function baka4toggle(){
@@ -38,7 +37,7 @@
             document.getElementById("cover4").classList.remove("noshow");
             document.getElementById("cover4").classList.add("yeshow");
             }else{
-            alert('купите по 10 едениц каждого улучшения для перехода на новую ступень')
+            showAlert();
             }
         }
 //конец кнопок стадий
@@ -54,7 +53,7 @@
             document.getElementById("cum3").classList.add("noshow");
             document.getElementById("cum4").classList.remove("yeshow");
             document.getElementById("cum4").classList.add("noshow");
-            document.getElementById("cum4").classList.remove("cover1");
+            document.getElementById("cum4").classList.remove("yeshow");
             document.getElementById("cover1").classList.add("noshow");
             document.getElementById("cover2").classList.add("noshow");
             document.getElementById("cover3").classList.add("noshow");
@@ -64,7 +63,7 @@
         
         //ОБЪЯВЛЯТЬ ЗДЕСЬ УЛУЧШЕНИЯ
 //просто все переменные
-            let moni = 0;
+            let moni = 0 ?? 0;
             let moniPS = 0;
             let clickWeight = 1;
             let clickWeightCost = 10;
@@ -82,7 +81,6 @@
             let scienseCost = 404000;
             let scienses = 0;
             let overseerCost = 2600000;
-            /*-*/
             let overseers = 0;
             let childCost = 26000000;
             let childs = 0;
@@ -300,6 +298,183 @@
             }
 //улучшения всё
             
+            let ShowStatus=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+            function clickWeightInfoT(){
+                if(ShowStatus[0]==0){
+            document.getElementById("clickWeightInfo").classList.remove("noshow");
+            document.getElementById("clickWeightInfo").classList.add("yeshow");
+            ShowStatus[0]=1;
+            }else{
+            document.getElementById("clickWeightInfo").classList.remove("yeshow");
+            document.getElementById("clickWeightInfo").classList.add("noshow");
+            ShowStatus[0]=0;
+            }
+            }
+            function workerInfoT(){
+            if(ShowStatus[1]==0){
+            document.getElementById("workerInfo").classList.remove("noshow");
+            document.getElementById("workerInfo").classList.add("yeshow");
+            ShowStatus[1]=1;
+            }else{
+            document.getElementById("workerInfo").classList.remove("yeshow");
+            document.getElementById("workerInfo").classList.add("noshow");
+            ShowStatus[1]=0;
+            }
+            }
+            function newsInfoT(){
+            if(ShowStatus[2]==0){
+            document.getElementById("newsInfo").classList.remove("noshow");
+            document.getElementById("newsInfo").classList.add("yeshow");
+            ShowStatus[2]=1;
+            }else{
+            document.getElementById("newsInfo").classList.remove("SPACEHYPNOLASERs");
+            document.getElementById("newsInfo").classList.add("noshow");
+            ShowStatus[2]=0;
+            }
+            }
+            function studentsInfoT(){
+            if(ShowStatus[3]==0){
+            document.getElementById("studentsInfo").classList.remove("noshow");
+            document.getElementById("studentsInfo").classList.add("yeshow");
+            ShowStatus[3]=1;
+            }else{
+            document.getElementById("studentsInfo").classList.remove("yeshow");
+            document.getElementById("studentsInfo").classList.add("noshow");
+            ShowStatus[3]=0;
+            }
+            }
+            function migrantInfoT(){
+            if(ShowStatus[4]==0){
+            document.getElementById("migrantInfo").classList.remove("noshow");
+            document.getElementById("migrantInfo").classList.add("yeshow");
+            ShowStatus[4]=1;
+            }else{
+            document.getElementById("migrantInfo").classList.remove("yeshow");
+            document.getElementById("migrantInfo").classList.add("noshow");
+            ShowStatus[4]=1;
+            }
+            }
+            function tvInfoT(){
+            if(ShowStatus[5]==0){
+            document.getElementById("tvInfo").classList.remove("noshow");
+            document.getElementById("tvInfo").classList.add("yeshow");
+            ShowStatus[5]=1;
+            }else{
+            document.getElementById("tvInfo").classList.remove("yeshow");
+            document.getElementById("tvInfo").classList.add("noshow");
+            ShowStatus[5]=0;
+            }
+            }
+            function scienseInfoT(){
+            if(ShowStatus[6]==0){
+            document.getElementById("scienseInfo").classList.remove("noshow");
+            document.getElementById("scienseInfo").classList.add("yeshow");
+            ShowStatus[6]=1;
+            }else{
+            document.getElementById("scienseInfo").classList.remove("yeshow");
+            document.getElementById("scienseInfo").classList.add("noshow");
+            ShowStatus[6]=0;
+            }
+            }
+            function overseerInfoT(){
+            if(ShowStatus[7]==0){
+            document.getElementById("overseerInfo").classList.remove("noshow");
+            document.getElementById("overseerInfo").classList.add("yeshow");
+            ShowStatus[7]=1;
+            }else{
+            document.getElementById("overseerInfo").classList.remove("yeshow");
+            document.getElementById("overseerInfo").classList.add("noshow");
+            ShowStatus[7]=0;
+            }
+            }
+            function childInfoT(){
+            if(ShowStatus[8]==0){
+            document.getElementById("childInfo").classList.remove("noshow");
+            document.getElementById("childInfo").classList.add("yeshow");
+            ShowStatus[8]=1;
+            }else{
+            document.getElementById("childInfo").classList.remove("yeshow");
+            document.getElementById("childInfo").classList.add("noshow");
+            ShowStatus[8]=0;
+            }
+            }
+            function spamInfoT(){
+            if(ShowStatus[9]==0){
+            document.getElementById("spamInfo").classList.remove("noshow");
+            document.getElementById("spamInfo").classList.add("yeshow");
+            ShowStatus[9]=1;
+            }else{
+            document.getElementById("spamInfo").classList.remove("yeshow");
+            document.getElementById("spamInfo").classList.add("noshow");
+            ShowStatus[9]=0;
+            }
+            }
+            function researcherInfoT(){
+            if(ShowStatus[10]==0){
+            document.getElementById("researcherInfo").classList.remove("noshow");
+            document.getElementById("researcherInfo").classList.add("yeshow");
+            ShowStatus[10]=1;
+            }else{
+            document.getElementById("researcherInfo").classList.remove("yeshow");
+            document.getElementById("researcherInfo").classList.add("noshow");
+            ShowStatus[10]=0;
+            }
+            }
+            function testInfoT(){
+            if(ShowStatus[11]==0){
+            document.getElementById("testInfo").classList.remove("noshow");
+            document.getElementById("testInfo").classList.add("yeshow");
+            ShowStatus[11]=1;
+            }else{
+            document.getElementById("testInfo").classList.remove("yeshow");
+            document.getElementById("testInfo").classList.add("noshow");
+            ShowStatus[11]=0;
+            }
+            }
+            function roboInfoT(){
+            if(ShowStatus[12]==0){
+            document.getElementById("roboInfo").classList.remove("noshow");
+            document.getElementById("roboInfo").classList.add("yeshow");
+            ShowStatus[12]=1;
+            }else{
+            document.getElementById("roboInfo").classList.remove("yeshow");
+            document.getElementById("roboInfo").classList.add("noshow");
+            ShowStatus[12]=0;
+            }
+            }
+            function zeppelinInfoT(){
+            if(ShowStatus[13]==0){
+            document.getElementById("zeppelinInfo").classList.remove("noshow");
+            document.getElementById("zeppelinInfo").classList.add("yeshow");
+            ShowStatus[13]=1;
+            }else{
+            document.getElementById("zeppelinInfo").classList.remove("yeshow");
+            document.getElementById("zeppelinInfo").classList.add("noshow");
+            ShowStatus[13]=0;
+            }
+            }
+            function neuroInfoT(){
+            if(ShowStatus[14]==0){
+            document.getElementById("neuroInfo").classList.remove("noshow");
+            document.getElementById("neuroInfo").classList.add("yeshow");
+            ShowStatus[14]=1;
+            }else{
+            document.getElementById("neuroInfo").classList.remove("yeshow");
+            document.getElementById("neuroInfo").classList.add("noshow");
+            ShowStatus[14]=0;
+            }
+            }
+            function SPACEHYPNOLASERInfoT(){
+            if(ShowStatus[15]==0){
+            document.getElementById("SPACEHYPNOLASERInfo").classList.remove("noshow");
+            document.getElementById("SPACEHYPNOLASERInfo").classList.add("yeshow");
+            ShowStatus[15]=1;
+            }else{
+            document.getElementById("SPACEHYPNOLASERInfo").classList.remove("yeshow");
+            document.getElementById("SPACEHYPNOLASERInfo").classList.add("noshow");
+            ShowStatus[15]=0;
+            }
+            }
             
             //ДОБАВЛЯТЬ УЛУЧШЕНИЯ СЮДА
             
@@ -551,7 +726,7 @@
             //ДОБАВЛЯТЬ УЛУЧШЕНТЯ СЮДА
             //добавляет мони каждые 100мс.
             setInterval(function(){
-                moni += (workers + newss * 5 + students * 10 + migrants * 69 + tvs * 590 + scienses * 3000 + overseers * 20000 + childs * 210000 + spams * 1900000 + researchers * 9110000 + tests * 75000000 + robos * 690000000 + zeppelins * 2200000000 + neuros * 13500000000 + SPACEHYPNOLASERs * 999999999999)/10;
+                moni += (workers + newss * 5 + students * 10 + migrants * 69 + tvs * 590 + scienses * 3000 + overseers * 20000 + childs * 210000 + spams * 1900000 + researchers * 9110000 + tests * 75000000 + robos * 690000000 + zeppelins * 2200000000 + neuros * 13500000000 + SPACEHYPNOLASERs * 999999999999)/10 ?? bruh;
                 document.getElementById('monni').innerHTML = abbreviateNumber(moni);
             }, 100)
             
@@ -592,7 +767,7 @@
             doom.style.position='absolute';
             doom.style.bottom='0';
             doom.style.left=getRandomArbitrary(-5000, -150)+'px';
-            doom.style.animation='movenime '+getRandomArbitrary(25,40)+'s linear infinite, stepnime '+getRandomArbitrary(0.5,1.5)+'s'+' linear infinite alternate';
+            doom.style.animation='movenime '+getRandomArbitrary(25,40)+'s linear infinite, stepnime '+getRandomArbitrary(0.4,1.2)+'s'+' linear infinite alternate';
             div.appendChild(doom);
             }
             }
@@ -611,7 +786,7 @@
             doom.style.position='absolute';
             doom.style.bottom='0';
             doom.style.left=getRandomArbitrary(-5000,-150)+'px';
-            doom.style.animation='movenime '+getRandomArbitrary(25,40)+'s linear infinite, stepnime '+getRandomArbitrary(0.5,1.5)+'s'+' linear infinite alternate';
+            doom.style.animation='movenime '+getRandomArbitrary(25,40)+'s linear infinite, stepnime '+getRandomArbitrary(0.5,1.1)+'s'+' linear infinite alternate';
             div.appendChild(doom);
             }
             }
@@ -752,7 +927,7 @@
 /*ШТУКА, КОТОРАЯ ИСПРАВИЛА КОШКУ КАРТОШКУ*/
 let sas = document.getElementById('tbltk');
 sas.addEventListener('mousedown', addMoni, false);
-
+//я пытался сделать это циклом.. честно
 let sos1=document.getElementById('btncst1');
 let sos2=document.getElementById('btncst2');
 let sos3=document.getElementById('btncst3');
@@ -798,4 +973,29 @@ function undotheshadow(y){
     document.getElementById("btncst"+y).classList.remove("btnrprs");
     document.getElementById("btncst"+y).classList.add("btnrls");
 }
-        
+function showAlert(){
+    document.getElementById("buyalertt").classList.remove("noshow");
+    document.getElementById("buyalertt").classList.add("yeshow");
+    document.getElementById("allcov").classList.remove("noshow");
+    document.getElementById("allcov").classList.add("yeshow");
+}
+function hideAlert(){
+    document.getElementById("buyalertt").classList.remove("yeshow");
+    document.getElementById("buyalertt").classList.add("noshow");
+    document.getElementById("allcov").classList.remove("yeshow");
+    document.getElementById("allcov").classList.add("noshow");
+}
+let k=0;
+function doSaveAlert(){
+    if(k==0){
+    document.getElementById("saveAlertt").classList.remove("noshow");
+    document.getElementById("saveAlertt").classList.add("yeshow");
+    setTimeout(function(){undoSaveAlert()},5000);
+    k=1;
+    }
+}
+function undoSaveAlert(){
+    document.getElementById("saveAlertt").classList.remove("yeshow");
+    document.getElementById("saveAlertt").classList.add("noshow");
+    k=0;
+}
