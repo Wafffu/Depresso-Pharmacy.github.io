@@ -1012,5 +1012,5 @@ let timeAFK = 0;
 function addAFK(){
     timeAFK = timeNow - timeThen;
     moni += moniPS * (timeAFK/1000);
-    alert(timeAFK/1000);
+    
 }
