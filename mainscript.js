@@ -99,7 +99,8 @@
             let SPACEHYPNOLASERCost = 99999999999999;
             let SPACEHYPNOLASERs = 0;
             let newValue = 69;
-            
+            let timeThen = Date.now();
+            let timeNow = Date.now();
 //деньги по клику
             function addMoni(){
                 moni += clickWeight;
@@ -480,6 +481,7 @@
             
             //сохраняем то, что хотим сохранить
             function saveGame(){
+                timeThen = Date.now();
                 let gameSave = {
                     moni: moni,
                     moniPS: moniPS,
@@ -517,8 +519,10 @@
                     SPACEHYPNOLASERCost: SPACEHYPNOLASERCost,
                     SPACEHYPNOLASERs: SPACEHYPNOLASERs,
                     s: s,
+                    timeThen: timeThen,
                 };
                 localStorage.setItem("gameSave", JSON.stringify(gameSave));
+                
             }
             
             //ДОБАВЛЯТЬ УЛУЧШЕНИЯ СЮДА
@@ -599,9 +603,12 @@
                 !== "undefined") SPACEHYPNOLASERs = savedGame.SPACEHYPNOLASERs;
                 if(typeof savedGame.s 
                 !== "undefined") s = savedGame.s;
+                if(typeof savedGame.timeThen 
+                !== "undefined") timeThen = savedGame.timeThen;
             }
             
             let s = 0;
+            
             //ДОБАВЛЯТЬ УЛУЧШЕНИЯ СЮДА
             //загрузка всего при запуске
             window.onload = function(){
@@ -609,9 +616,9 @@
                 if(s == 0){
                     s++;
                     showSpravka();
-                    
                 }
-                saveGame();
+                timeNow=Date.now();
+                addAFK();
                 document.getElementById('clickWeightCost').innerHTML = abbreviateNumber(clickWeightCost);
                 document.getElementById('clickWeights').innerHTML = clickWeights;
                 document.getElementById('workerCost').innerHTML = abbreviateNumber(workerCost);
@@ -647,6 +654,7 @@
                 document.getElementById('monni').innerHTML = abbreviateNumber(moni);
                 document.getElementById('moniPS').innerHTML = abbreviateNumber(moniPS);
                 randomMove();
+                saveGame();
             };
             
             //рестарт
@@ -717,6 +725,7 @@
             }
             
             //авто сохранение
+            
             setInterval(function(){
                 saveGame();
             }, 30000);
@@ -998,4 +1007,10 @@ function undoSaveAlert(){
     document.getElementById("saveAlertt").classList.remove("yeshow");
     document.getElementById("saveAlertt").classList.add("noshow");
     k=0;
+}
+let timeAFK = 0;
+function addAFK(){
+    timeAFK = timeNow - timeThen;
+    moni += moniPS * (timeAFK/1000);
+    alert(timeAFK/1000);
 }
