@@ -1,13 +1,13 @@
 
-/*шрифт*/
-            @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-            
+            /*шрифт*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 
             * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-}
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
             html {
                 padding: 0;
                 margin: 0;
@@ -15,16 +15,18 @@
                 font-size: 15px;
                 font-weight: bold;
                 background-color: #8F91A2
-};
-/*самое маленькое свойство в этом коде*/
-            body{
-            margin: 0;
-            padding: 0;
             }
-            
-/*шапка*/
-            header{
-            padding: 0;
+
+            ;
+            /*самое маленькое свойство в этом коде*/
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            /*шапка*/
+            header {
+                padding: 0;
                 margin: 0;
                 height: 200px;
                 background-color: #343F3E;
@@ -33,36 +35,36 @@
                 background-position: 50% 25%;
                 margin: 0;
             }
-            h1{
-            margin: 5px;
-            padding: 5px;
+            h1 {
+                margin: 5px;
+                padding: 5px;
             }
-            h2{
-            margin: 5px;
-            padding: 5px;
+            h2 {
+                margin: 5px;
+                padding: 5px;
             }
-            h3{
-            margin: 5px;
-            padding: 5px;
+            h3 {
+                margin: 5px;
+                padding: 5px;
             }
-            li{
-            margin: 5px;
-            padding: 5px;
+            li {
+                margin: 5px;
+                padding: 5px;
             }
-            p{
-            margin: 5px;
+            p {
+                margin: 5px;
             }
-/*я пытался избавиться от отступа*/
-            .everything{
+            /*я пытался избавиться от отступа*/
+            .everything {
                 margin: 0;
                 padding: 0;
             }
-            .coom{
+            .coom {
                 margin: 0;
                 background-color: pink;
                 background-image: url(https://sher.media/wp-content/uploads/2020/10/2795340439_bacf3599c7_o.jpg);
             }
-            .allcover{
+            .allcover {
                 margin: 0;
                 z-index: 8;
                 height: 100%;
@@ -73,35 +75,50 @@
                 left: 0;
                 display: none;
             }
-            
-            #inhead{
+
+            #inhead {
                 display: flex;
                 justify-content: space-between;
                 align-content: center;
             }
-            .inheader{
-                height:150px;
-                width: 220px;
+
+            .inheader {
+                height: 150px;
+                width: 310px;
                 margin: 2%;
             }
-            #funny{
+            .inheader2{
+                height: 170px;
+                width: 300px;
+            }
+            .ininheader{
+                height: 100%;
+                width: 100px;
+            }
+            #funny {
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
             }
-            #nofunny{
+            #nofunny {
                 background-image: url(https://i.imgur.com/O2jIiHu_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
                 background-size: contain;
                 background-repeat: no-repeat;
             }
-            #iheader{
+            #iheader {
                 display: flex;
-                flex-wrap: wrap;
+                flex-wrap: nowrap;
                 justify-content: space-around;
                 align-content: center;
             }
-            .contact{
-                height:30px;
+
+            #ininhead{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .contact {
+                height: 30px;
                 width: 60px;
                 background-color: #343F3E;
                 margin: 4%;
@@ -110,20 +127,35 @@
                 line-height: 30px;
                 color: white;
             }
-            .contact2{
-                height:60px;
+            .contact2 {
+                height: 60px;
                 width: 60px;
                 background-color: #343F3E;
                 margin: 4%;
             }
-            #kasha{
-                
+            #grouppic {
+                background-image: url(https://i.imgur.com/zBwvTst_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-size: cover;
+                border-radius: 15px;
+            }
+            #kasha {
+
                 background-image: url(https://i.imgur.com/qtpAHS1_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
                 background-size: cover;
                 border-radius: 15px;
             }
-            #author{
-                height:30px;
+            #group {
+                height: 30px;
+                width: 50px;
+                background-color: #343F3E;
+                margin: 4%;
+                border-radius: 9px;
+                text-align: center;
+                line-height: 30px;
+                color: white;
+            }
+            #author {
+                height: 30px;
                 width: 80px;
                 background-color: #343F3E;
                 margin: 4%;
@@ -132,8 +164,8 @@
                 line-height: 30px;
                 color: white;
             }
-            #tester{
-                height:30px;
+            #tester {
+                height: 30px;
                 width: 95px;
                 background-color: #343F3E;
                 margin: 4%;
@@ -143,14 +175,14 @@
                 color: white;
             }
             /*заменить потом на кликер пуры*/
-            #pura{
+            #pura {
                 background-image: url(https://i.imgur.com/aa5gPNs_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
                 background-size: cover;
                 border-radius: 15px;
             }
-/*конец справки*/
-/*окно в ебеня*/
-            #bruh{
+            /*конец справки*/
+            /*окно в ебеня*/
+            #bruh {
                 display: flex;
                 flex-direction: column;
                 align-items: stretch;
@@ -160,7 +192,7 @@
                 margin-left: auto;
                 margin-right: auto;
             }
-            .shit{
+            .shit {
                 overflow: hidden;
                 height: 600px;
                 margin: 1% 2%;
@@ -171,7 +203,7 @@
                 border-radius: 7px;
                 position: relative;
             }
-            .textpain{
+            .textpain {
                 height: 20px;
                 width: 494px;
                 margin-left: 50%;
@@ -182,7 +214,7 @@
                 line-height: 22px;
                 text-align: center;
             }
-            .pain{
+            .pain {
                 width: 580px;
                 height: 69px;
                 margin-left: 50%;
@@ -194,7 +226,7 @@
                 line-height: 79px;
                 font-size: 50px;
             }
-            .painPS{
+            .painPS {
                 width: 200px;
                 height: 20px;
                 margin-left: 50%;
@@ -207,24 +239,24 @@
                 text-align: center;
             }
             /*подумать над пикчей и размером, добаыить котику анимацию и возможно какойнибудть эффект на задний план*/
-            
-/*котик ротате*/
-            @keyframes rotate{
 
-                from{
-                    
-                transform: rotate(-15deg) translate(-50%, -50%);
+            /*котик ротате*/
+@keyframes rotate {
+
+                from {
+
+                    transform: rotate(-15deg) translate(-50%, -50%);
                 }
-                to{
-                    
-                transform: rotate(15deg) translate(-50%, -50%);
+                to {
+
+                    transform: rotate(15deg) translate(-50%, -50%);
                 }
-                
+
             }
-/*сам котик*/
+            /*сам котик*/
             /*поменять бы название, но этот класс уже много где используеься(лень)*/
-            .tabletka{
-                
+            .tabletka {
+
                 animation-duration: 3s;
                 animation-name: rotate;
                 animation-iteration-count: infinite;
@@ -245,8 +277,8 @@
                 background-position: center;
                 touch-action: manipulation;
             }
-/*микрочелики*/
-            .anime{
+            /*микрочелики*/
+            .anime {
                 margin: 0;
                 height: 100px;
                 width: 100px;
@@ -255,54 +287,56 @@
                 bottom: 0;
                 animation: movenime 20s linear infinite, stepnime 0.35s linear infinite alternate;
             }
-            
-            @keyframes movenime{
-                from{
+
+@keyframes movenime {
+                from {
                     transform: translate(-100px,0%);
                 }
-                to{
+                to {
                     transform: translate(5800px,0%);
                 }
             }
-            @keyframes stepnime{
-                from{
+@keyframes stepnime {
+                from {
                     bottom: 0%;
                 }
-                to{
+                to {
                     bottom: -1%;
                 }
             }
-/*я не помню, что это :>*/
-            
+            /*я не помню, что это :>*/
+
             /*наверное штука на которой 4 кнопки сидят*/
-            .piss{ 
+            .piss {
                 height: 100px;
                 margin: 1% 2%;
                 background-color: #94B0DA;
                 border-radius: 7px;
             }
             /*uwu*/
-            #sussy-baka{
+            #sussy-baka {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
-            }/*изменишь размер баки и крышка полетит в пизду*/
-            
+            }
+
+            /*изменишь размер баки и крышка полетит в пизду*/
+
             /*собственно сама крышка*/
-            .bakacover{
+            .bakacover {
                 height: 100%;
                 width: 100%;
                 background-color: rgba(0,0,0,0.1);
                 border-radius: 15px;
                 display: none;
-                box-shadow:inset 5px 5px 10px rgba(0,0,0,.5);
+                box-shadow: inset 5px 5px 10px rgba(0,0,0,.5);
                 transform: translate(0, -112%);
             }
-            
+
             /*собственно сами баки*/
             /*это те 4 кнопки с этапами*/
             /*в первой версии на них были пикчи, но тогда от них было мало толку*/
-            .baka1{
+            .baka1 {
                 /*background-image: url(https://i.imgur.com/bchbfa3_d.webp?maxwidth=640&shape=thumb&fidelity=medium);*/
                 height: 85px;
                 width: 20%;
@@ -312,11 +346,11 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 color: white;
-                text-align:center;
+                text-align: center;
                 line-height: 95px;
                 font-size: 50px;
             }
-            .baka2{
+            .baka2 {
                 /*background-image: url(https://i.imgur.com/J6Sq3Jc_d.webp?maxwidth=640&shape=thumb&fidelity=medium);*/
                 height: 85%;
                 width: 20%;
@@ -326,11 +360,11 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 color: white;
-                text-align:center;
+                text-align: center;
                 line-height: 95px;
                 font-size: 50px;
             }
-            .baka3{
+            .baka3 {
                 /*background-image: url(https://i.imgur.com/rzmFpkJ_d.webp?maxwidth=640&shape=thumb&fidelity=medium);*/
                 height: 85%;
                 width: 20%;
@@ -340,11 +374,11 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 color: white;
-                text-align:center;
+                text-align: center;
                 line-height: 95px;
                 font-size: 50px;
             }
-            .baka4{
+            .baka4 {
                 /*background-image: url(https://i.imgur.com/5FE8v7Q_d.webp?maxwidth=640&shape=thumb&fidelity=medium);*/
                 height: 85%;
                 width: 20%;
@@ -354,34 +388,36 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 color: white;
-                text-align:center;
+                text-align: center;
                 line-height: 95px;
                 font-size: 50px;
             }
             /*кам*/
-/*меню с улучшениями*/
-            .cum{
+            /*меню с улучшениями*/
+            .cum {
                 margin: 1% 2%;
                 background-color: #8F91A2;
                 border-radius: 7px;
                 padding-bottom: 5%;
             }
-            #yhoho{
+            #yhoho {
                 display: flex;
                 flex-direction: column;
                 align-items: stretch;
                 justify-content: flex-start;
             }
             /*you've been GNOMED*/
-            .gnome{
+            .gnome {
                 height: 150px;
                 margin: 1% 2%;
             }
-            #gnomo{
+            #gnomo {
                 display: flex;
                 align-items: center;
-            }/*ВЫПАДАЮЩЕЕ ОПИСАНИЕ ПО КЛИКУ ДОБАВЬ УЖЕ*/
-            .up-pick{
+            }
+
+            /*ВЫПАДАЮЩЕЕ ОПИСАНИЕ ПО КЛИКУ ДОБАВЬ УЖЕ*/
+            .up-pick {
                 z-index: 3;
                 height: 128px;
                 width: 128px;
@@ -390,8 +426,8 @@
                 border-radius: 20px;
                 box-shadow: 5px 5px 10px rgba(0,0,0,.7);
             }
-            
-            .upgradeInfo{
+
+            .upgradeInfo {
                 width: 90%;
                 margin-left: 5%;
                 padding: 1%;
@@ -403,111 +439,129 @@
                 line-height: 135%;
                 transform: translate(0,-25px);
             }
-            
+
             /*с улучшениями вроде бы закончил*/
-/*пикчи улучшений*/
-            #clickWeighter{
+            /*пикчи улучшений*/
+            #clickWeighter {
+                background-image: url(https://i.imgur.com/qsSpu86_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-repeat: no-repeat;
+                background-position: center;
+                touch-action: manipulation;
+            }
+            #clickWeighter2 {
+                background-image: url(https://i.imgur.com/yK9jA19_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-repeat: no-repeat;
+                background-position: center;
+                touch-action: manipulation;
+            }
+            #clickWeighter3 {
+                background-image: url(https://i.imgur.com/wdmftRP_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
+                background-repeat: no-repeat;
+                background-position: center;
+                touch-action: manipulation;
+            }
+            #clickWeighter4 {
                 background-image: url(https://i.imgur.com/56Qov9g_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
                 background-repeat: no-repeat;
                 background-position: center;
                 touch-action: manipulation;
             }
-            #worker{
+            #worker {
                 background-image: url(https://i.imgur.com/Tv1ZKYB_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
                 background-repeat: no-repeat;
                 touch-action: manipulation;
             }
-            #migrant{
+            #migrant {
                 background-image: url(https://i.imgur.com/4N9wT1L_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
                 background-repeat: no-repeat;
                 touch-action: manipulation;
             }
-            #child{
+            #child {
                 background-image: url(
                     https://i.imgur.com/RGRBIeB_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
                 background-repeat: no-repeat;
                 touch-action: manipulation;
             }
-            #robo{
+            #robo {
                 background-image: url(https://i.imgur.com/y4dAkTX_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
                 background-size: 80%;
                 background-position: center;
                 background-repeat: no-repeat;
                 touch-action: manipulation;
             }
-            #newsAds{
+            #newsAds {
                 background-image: url(https://i.imgur.com/oXIUnDp_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
                 background-position: center;
                 background-repeat: no-repeat;
                 touch-action: manipulation;
             }
-            #television{
+            #television {
                 background-image: url(https://i.imgur.com/1wOy6hz_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: 90%;
                 touch-action: manipulation;
             }
-            #spam{
+            #spam {
                 background-image: url(https://i.imgur.com/HhSHI3Q_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: 90%;
                 touch-action: manipulation;
             }
-            #zeppelin{
+            #zeppelin {
                 background-image: url(https://i.imgur.com/eTLXuM2_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
                 background-position: center;
                 background-repeat: no-repeat;
                 touch-action: manipulation;
             }
-            #student{
+            #student {
                 background-image: url(https://i.imgur.com/4gNJ39w_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: 160%;
                 touch-action: manipulation;
             }
-            #sciense{
+            #sciense {
                 background-image: url(https://i.imgur.com/KxlUo6i_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
                 background-position: center;
                 background-repeat: no-repeat;
                 touch-action: manipulation;
             }
-            #researcher{
+            #researcher {
                 background-image: url(https://i.imgur.com/xIIhfPE_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
                 background-position: center;
                 background-repeat: no-repeat;
                 touch-action: manipulation;
             }
-            #neuro{
+            #neuro {
                 background-image: url(https://i.imgur.com/B9hWrlI_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
                 background-position: center;
                 background-repeat: no-repeat;
-                touch-action:manipulation;
+                touch-action: manipulation;
             }
-            #overseer{
+            #overseer {
                 background-image: url(https://i.imgur.com/DokQfrb_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
                 background-repeat: no-repeat;
                 background-position: center;
                 touch-action: manipulation;
             }
-            #test{
+            #test {
                 background-image: url(https://i.imgur.com/cPudIh0_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
                 background-position: center;
                 background-repeat: no-repeat;
                 touch-action: manipulation;
             }
-            #SPACEHYPNOLASER{
+            #SPACEHYPNOLASER {
                 background-image: url(https://i.imgur.com/M5Unz4D_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
                 background-position: center;
                 background-repeat: no-repeat;
                 touch-action: manipulation;
             }
-/*конец улучшений*/
-            
-/*оформление кнопок улучшений*/
-            #name-cost{
+            /*конец улучшений*/
+
+            /*оформление кнопок улучшений*/
+            #name-cost {
                 height: 128px;
                 width: 90%;
                 display: flex;
@@ -515,12 +569,12 @@
                 align-items: stretch;
                 justify-content: center;
             }
-            #name-bought{
+            #name-bought {
                 display: flex;
                 justify-content: space-between;
                 height: 20%;
             }
-            .name{
+            .name {
                 z-index: 1;
                 padding-left: 15px;
                 transform: translate(-10px, 0);
@@ -530,7 +584,7 @@
                 line-height: 25px;
                 box-shadow: 5px 5px 10px rgba(0,0,0,.7);
             }
-            .bought{
+            .bought {
                 width: auto;
                 background-color: #505A5B;
                 color: white;
@@ -538,7 +592,7 @@
                 line-height: 25px;
                 box-shadow: 5px 5px 10px rgba(0,0,0,.7);
             }
-            .cost{
+            .cost {
                 z-index: 2;
                 width: 101%;
                 transform: translate(-10px,0);
@@ -552,28 +606,28 @@
                 box-shadow: 5px 5px 10px rgba(0,0,0,.7);
                 touch-action: manipulation;
             }
-/*конец офоррмлений*/
+            /*конец офоррмлений*/
 
-/*штука внизу*/
-            .youNeedThis{
+            /*штука внизу*/
+            .youNeedThis {
                 margin: 0;
                 height: 100px;
                 background-color: rgb(148, 176, 218,.8);
                 padding: 20px;
             }
             /*настройка положения*/
-            #needThis{
+            #needThis {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
             }
             /*сохранить/загрузить*/
-            #savlod{
+            #savlod {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
             }
-            .save{
+            .save {
                 width: 150px;
                 height: 70px;
                 margin: 5px 20px;
@@ -583,7 +637,7 @@
                 text-align: center;
                 border-radius: 5px 20px;
             }
-            .reset{
+            .reset {
                 width: 135px;
                 height: 70px;
                 margin: 5px 20px;
@@ -594,12 +648,12 @@
                 border-radius: 5px 20px;
             }
             /*инф*/
-            #inf{
+            #inf {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
             }
-            .infoo{
+            .infoo {
                 height: 80px;
                 width: 80px;
                 border-radius: 40px;
@@ -608,9 +662,9 @@
                 touch-action: manipulation;
                 background-size: contain;
                 background-image: url(https://i.imgur.com/A207VkH_d.webp?maxwidth=640&shape=thumb&fidelity=medium);
-                
+
             }
-            .optimized{
+            .optimized {
                 margin: 5px;
                 padding: 5px
                 width: 269px;
@@ -622,8 +676,8 @@
                 border-radius: 5px;
                 margin: 5px;
             }
-             
-            .gameVersion{
+
+            .gameVersion {
                 width: 269px;
                 color: white;
                 background-color: #343F3E;
@@ -633,12 +687,12 @@
                 margin: 5px;
                 padding: 5px;
             }
-/*нижняя штука всё*/
+            /*нижняя штука всё*/
 
-            #wellcum{
+            #wellcum {
                 line-height: 45px;
             }
-            .spravka{
+            .spravka {
                 margin: 0;
                 z-index: 9;
                 position: absolute;
@@ -654,15 +708,15 @@
                 display: none;
                 animation: down 0.2s linear;
             }
-            
-            .buyalert{
+
+            .buyalert {
                 z-index: 8;
                 position: fixed;
                 top: 50%;
                 left: 50%;
                 height: 250px;
                 width: 400px;
-                padding:10px;
+                padding: 10px;
                 color: white;
                 background-color: #343F3E;
                 transform: translate(-50%, -10%);
@@ -673,8 +727,8 @@
                 line-height: 40px;
                 border-radius: 15px;
             }
-            
-            .saveAlert{
+
+            .saveAlert {
                 height: 80px;
                 width: 300px;
                 z-index: 6;
@@ -692,54 +746,58 @@
                 display: none;
             }
             /*штуки для изменения вижжжажмжжмжммжсти*/
-            .cumm2{
+            .cumm2 {
                 display: none;
             }
-            .cumm1{
+            .cumm1 {
                 display: block;
             }
-            .btnprs{
+            .btnprs {
                 box-shadow: 5px 5px 10px rgba(0,0,0,.0);
             }
-            .btnrls{
+            .btnrls {
                 box-shadow: 5px 5px 10px rgba(0,0,0,.7);
             }
-            .yeshow {display:block;}
-            .noshow {display:none;}
-            
+            .yeshow {
+                display: block;
+            }
+            .noshow {
+                display: none;
+            }
+
             /*СКВИШ ДЕ КЕТ*/
             .sqsh {
                 height: 28%;
                 width: 28%;
             }
-            .unsqsh{
+            .unsqsh {
                 height: 30%;
                 width: 30%;
             }
-            @keyframes up{
-            from{
-            transform: translate(-50%,0);
+@keyframes up {
+                from {
+                    transform: translate(-50%,0);
+                }
+                25% {
+                    transform: translate(-50%,-100%);
+                }
+                75% {
+                    transform: translate(-50%,-100%);
+                }
+                to {
+                    transform: translate(-50%,0);
+                }
             }
-            25%{
-            transform: translate(-50%,-100%);
-            }
-            75%{
-            transform: translate(-50%,-100%);
-            }
-            to{
-            transform: translate(-50%,0);
-            }
-            }
-            .slide{
+            .slide {
                 animation: down 1s linear;
             }
-            @keyframes down{
-            from{
-                opacity: 0;
-                transform: translate(-50%,-12%);
-            }
-            to{
-                opacity: 1;
-                transform: translate(-50%,-10%);
-            }
+@keyframes down {
+                from {
+                    opacity: 0;
+                    transform: translate(-50%,-12%);
+                }
+                to {
+                    opacity: 1;
+                    transform: translate(-50%,-10%);
+                }
             }
